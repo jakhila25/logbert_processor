@@ -1,3 +1,12 @@
 model/bert/best_center.pt
 model/bert/best_total_dist.pt
 model/bert/best_bert.pth
+model/bert/train_log2.csv
+model/bert/train_valid_loss.png
+model/bert/valid_log2.csv
+bert_pytorch/trainer/optim_schedule.py
+bert_pytorch/trainer/pretrain.py
+model/bert/test_abnormal_errors.pkl
+model/bert/test_abnormal_results
+model/bert/test_normal_errors.pkl
+model/bert/test_normal_results
