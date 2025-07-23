@@ -1,6 +1,8 @@
 import os
 import sys
 
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
 sys.path.append('../')
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # Ensure local logbert_processor and logparser are first in sys.path for all imports
@@ -25,6 +27,7 @@ import re
 # === Constants ===
 TOP_EVENTS = 5
 MAX_RCA_TOKENS = 200
+MISTRAL_MODEL = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
 
 # === Log Parsing ===
@@ -141,6 +144,18 @@ def generate_prompt(event_templates):
     return prompt
 
 
+def call_mistral(prompt, tokenizer, model, device):
+    inputs = tokenizer(prompt, return_tensors="pt").to(device)
+    outputs = model.generate(
+        **inputs,
+        max_length=inputs['input_ids'].shape[1] + MAX_RCA_TOKENS,
+        do_sample=False,
+        top_k=50,
+        pad_token_id=tokenizer.eos_token_id
+    )
+    return tokenizer.decode(outputs[0], skip_special_tokens=True)[len(prompt):].strip()
+
+
 def compute_logkey_anomaly(masked_output, masked_label, top_k=5):
     num_undetected = 0
     for i, token in enumerate(masked_label):
@@ -185,6 +200,9 @@ def detect_anomalies_and_explain(input_log_path):
     options["device"] = torch.device(
         "cuda" if torch.cuda.is_available() else "cpu")
 
+    tokenizer = AutoTokenizer.from_pretrained(MISTRAL_MODEL, cache_dir="./hf_cache")
+    model_mistral = AutoModelForCausalLM.from_pretrained(MISTRAL_MODEL, torch_dtype=torch.float32).to(options["device"])
+    model_mistral.eval()
     vocab = WordVocab.load_vocab(options["vocab_path"])
     model = load_logbert_model(options, vocab).to(options["device"]).eval()
     center = load_center(CENTER_PATH, options["device"])
@@ -218,15 +236,14 @@ def detect_anomalies_and_explain(input_log_path):
         undetected_ratio = num_undetected / masked_total if masked_total else 0
 
         status = "Abnormal" if z_score > 2 or undetected_ratio > 0.5 else "Normal"
-        print(f"STATUS====={status}")
         if status == "Normal":
             continue
 
         top_eids = test_sequences[i][:TOP_EVENTS]
         event_templates = [event_template_dict.get(
             eid, f"[Missing Event {eid}]") for eid in top_eids]
-
-        # Inject results to DB
+        prompt = generate_prompt(event_templates)
+        explanation = call_mistral(prompt, tokenizer, model_mistral, options["device"])
 
         results.append({
             "AppId": app_ids[i],
@@ -235,7 +252,17 @@ def detect_anomalies_and_explain(input_log_path):
             "UndetectedRatio": undetected_ratio,
             "status": status,
             "Events": event_templates,
-            "Explanation": None
+            "Explanation": explanation
         })
+        # Inject results to DB
+        # Database configuration
+        # DB_NAME = book - my - service
+        #
+        # # Full database URI for async SQLAlchemy/Postgres
+        # DATABASE_URI = postgresql + asyncpg: // trans_owner: BookMyService7 @ ep - sweet - surf - a1qeduoy.ap - southeast - 1.
+        # aws.neon.tech / logbert_rca?options = -csearch_path % 3
+        # Dtrans
+        # table
+        # name: rca_results
 
     return results
