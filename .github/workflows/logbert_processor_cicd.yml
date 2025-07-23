@@ -90,7 +90,7 @@ jobs:
             docker rm lobert_processor_agent-container || true
           
             echo "Running new container..."
-            docker run -d --name lobert_processor_agent-container -p 8000:8000 ${{env.ECR_IMAGE}}
+            docker run -d --name lobert_processor_agent-container -p 8001:8001 ${{env.ECR_IMAGE}}
 
             echo "Deployment complete. Active containers:"
             docker ps -a
