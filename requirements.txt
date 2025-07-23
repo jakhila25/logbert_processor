@@ -18,3 +18,4 @@ logparser
 bert_pytorch
 seaborn
 botocore
+psycopg2-binary
