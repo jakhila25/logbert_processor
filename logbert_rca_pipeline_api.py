@@ -165,7 +165,34 @@ def compute_logkey_anomaly(masked_output, masked_label, top_k=5):
 
 
 # === API-Compatible RCA Pipeline ===
+async def batch_insert_rca_results(results):
+    """Batch insert all RCA results into database"""
+    if not results:
+        print("⚠️ No results to insert")
+        return
 
+    conn = await create_connection()
+    if not conn:
+        print("❌ Cannot proceed without database connection")
+        return
+
+    try:
+        # Create table if needed
+        # await create_rca_table(conn)
+
+        # Insert results
+        inserted_count = 0
+        for result in results:
+            result_id = await insert_rca_result(conn, result)
+            if result_id:
+                inserted_count += 1
+
+        print(f"🎉 Successfully inserted {inserted_count}/{len(results)} RCA results to database")
+
+    except Exception as e:
+        print(f"❌ Batch insert failed: {e}")
+    finally:
+        await conn.close()
 
 def detect_anomalies_and_explain(input_log_path):
     log_file = os.path.basename(input_log_path)
@@ -255,14 +282,5 @@ def detect_anomalies_and_explain(input_log_path):
             "Explanation": explanation
         })
         # Inject results to DB
-        # Database configuration
-        # DB_NAME = book - my - service
-        #
-        # # Full database URI for async SQLAlchemy/Postgres
-        # DATABASE_URI = postgresql + asyncpg: // trans_owner: BookMyService7 @ ep - sweet - surf - a1qeduoy.ap - southeast - 1.
-        # aws.neon.tech / logbert_rca?options = -csearch_path % 3
-        # Dtrans
-        # table
-        # name: rca_results
 
     return results

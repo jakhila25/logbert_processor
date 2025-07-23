@@ -1,5 +1,8 @@
 import os
 import sys
+import psycopg2
+import json
+from datetime import datetime
 
 # Add the parent directory to sys.path so 'scripts' can be imported
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,6 +32,8 @@ S3_BUCKET = os.getenv("S3_BUCKET", "group13506")
 S3_REGION = os.getenv("S3_REGION", "eu-north-1")
 S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID", "AKIARVB2F2G73CRY5NS3")
 S3_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY", "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")
+DATABASE_URL = os.getenv("DATABASE_URL",
+                         "postgresql://trans_owner:BookMyService7@ep-sweet-surf-a1qeduoy.ap-southeast-1.aws.neon.tech/logbert_rca?options=-csearch_path%3Dtrans")
 
 redis_client = redis.Redis(
     host=REDIS_HOST,
@@ -63,11 +68,9 @@ def save_uploaded_log(uploaded_file: UploadFile):
 
 async def process_log(filename, file_content):
     # Save file_content to a temporary file and run RCA pipeline
-    with tempfile.NamedTemporaryFile(delete=False, mode="wb", suffix=".log") as tmp:
-        tmp.write(file_content)
-        tmp_path = tmp.name
-        print(f"TEMP PATH ++++ {tmp_path} === {tmp.name}")
-
+    # with tempfile.NamedTemporaryFile(delete=False, mode="wb", suffix=".log") as tmp:
+    #     tmp.write(file_content)
+    #     tmp_path = tmp.name
     os.makedirs(os.path.dirname(INPUT_LOG_PATH), exist_ok=True)
     with open(INPUT_LOG_PATH, "wb") as f:
         f.write(file_content)
@@ -77,6 +80,7 @@ async def process_log(filename, file_content):
         return detect_anomalies_and_explain(INPUT_LOG_PATH)
 
     results = await loop.run_in_executor(None, _run_pipeline)
+
     # os.unlink(tmp_path)
     if results and len(results) > 0:
         return results
@@ -110,6 +114,39 @@ async def save_rca_to_db(rca_result):
     pass
 
 
+def insert_rca_result(filename, app_id, score, z_score, undetected_ratio, status, event_templates, explanation,
+                      rootcause=None, ai_explanation=None):
+    """
+    Insert RCA result into PostgreSQL rca_results table.
+    """
+    try:
+        conn = psycopg2.connect(DATABASE_URL)
+        cur = conn.cursor()
+        query = """
+        INSERT INTO rca_results 
+        (filename, app_id, score, z_score, undetected_ratio, status, events, explanation, logdate)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, now())
+        """
+
+        cur.execute(query, (
+            filename,
+            app_id,
+            float(score),
+            float(z_score),
+            float(undetected_ratio),
+            status,
+            json.dumps(event_templates),  # Convert Python dict/list to JSON string
+            explanation
+        ))
+        conn.commit()
+        cur.close()
+        conn.close()
+        print(f"Inserted RCA result for AppId: {app_id}")
+
+    except Exception as e:
+        print(f"Error inserting RCA result: {e}")
+
+
 async def main():
     while True:
         loop = asyncio.get_event_loop()
@@ -135,10 +172,21 @@ async def main():
 @app.post("/process-log")
 async def process_log_endpoint(request: LogRequest):
     file_content = await get_file_from_s3(request.filename)
-    print(f"FILE COMTENT =====\n{file_content}")
     if file_content is None:
         raise HTTPException(status_code=404, detail=f"File {request.filename} not found in S3 bucket.")
     result = await process_log(request.filename, file_content)
+    for record in result:
+        insert_rca_result(
+            filename="rca_abnormal_hadoop.log",
+            app_id=record["AppId"],
+            score=record["Score"],
+            z_score=record["z_score"],
+            undetected_ratio=record["UndetectedRatio"],
+            status=record["status"],
+            event_templates=record["Events"],
+            explanation=record["Explanation"]
+        )
+
     return result
 
 
