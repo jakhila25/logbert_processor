@@ -10,3 +10,5 @@ model/bert/test_abnormal_errors.pkl
 model/bert/test_abnormal_results
 model/bert/test_normal_errors.pkl
 model/bert/test_normal_results
+__pycache__/app.cpython-313.pyc
+__pycache__/logbert_rca_pipeline_api.cpython-313.pyc
