@@ -1,0 +1,97 @@
+# This workflow will :- 
+# python versions - 3.11
+# job - dockerbuild :-
+#   dockerbuild - build docker image 
+#   dockerpush - push the image to docker hub 
+# job - publish to ECR and deploy to EC2 
+#   login to ecr and push the image to ECR repo
+#   login to ec2 and pull the image from ECR
+#   run the new container 
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  dockerbuild: 
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2.1.0
+        with:
+          username: ${{secrets.DOCKER_USERNAME }}
+          password: ${{secrets.DOCKER_SECRET }}
+      - name: Build Docker Image
+        run: |
+          docker build -f Dockerfile -t lobert_processor_agent:latest "." --no-cache
+      - name: Push Docker Image
+        run: |
+          docker tag lobert_processor_agent:latest ${{secrets.DOCKER_USERNAME }}/lobert_processor_agent:latest
+          docker push ${{secrets.DOCKER_USERNAME }}/lobert_processor_agent:latest
+  publishecr_deployec2: 
+    needs: dockerbuild
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{secrets.AWS_REGION }}
+
+      - name: Login to DockerHub
+        run: |
+          echo "${{secrets.DOCKER_SECRET }}" | docker login -u "${{secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Pull image from DockerHub
+        run: |
+         docker pull ${{secrets.DOCKER_USERNAME }}/lobert_processor_agent:latest
+
+      - name: Tag image for ECR
+        run: |
+          ECR_REGISTRY=${{secrets.AWS_ACCOUNT_ID}}.dkr.ecr.${{secrets.AWS_REGION }}.amazonaws.com/${{secrets.ECR_REPO_NAME}}
+          docker tag ${{secrets.DOCKER_USERNAME }}/lobert_processor_agent:latest $ECR_REGISTRY:latest
+          echo "ECR_IMAGE=$ECR_REGISTRY:latest" >> $GITHUB_ENV
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Push image to ECR
+        run: docker push $ECR_IMAGE
+
+      - name: Deploy to EC2 from ECR
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.EC2_HOST }}
+          username: ${{secrets.EC2_USER }}
+          key: ${{secrets.EC2_SSH_KEY }}
+          script: |
+            echo "Logging into ECR from EC2..."
+            ECR_REGISTRY=${{secrets.AWS_ACCOUNT_ID}}.dkr.ecr.${{secrets.AWS_REGION }}.amazonaws.com/${{secrets.ECR_REPO_NAME}}
+            aws ecr get-login-password --region ${{secrets.AWS_REGION }} | \
+            docker login --username AWS --password-stdin $ECR_REGISTRY
+      
+            echo "Pull latest image from ECR..."
+            echo "ECR Image = ${{env.ECR_IMAGE}}"
+            docker pull ${{env.ECR_IMAGE}}
+
+            echo "Stopping existing container (if any)..."
+            docker stop lobert_processor_agent-container || true
+            docker rm lobert_processor_agent-container || true
+          
+            echo "Running new container..."
+            docker run -d --name lobert_processor_agent-container -p 8000:8000 ${{env.ECR_IMAGE}}
+
+            echo "Deployment complete. Active containers:"
+            docker ps -a
+  
