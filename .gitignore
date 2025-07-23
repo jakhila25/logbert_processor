@@ -1,0 +1,3 @@
+model/bert/best_center.pt
+model/bert/best_total_dist.pt
+model/bert/best_bert.pth
