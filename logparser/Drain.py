@@ -151,7 +151,7 @@ class LogParser:
         for token1, token2 in zip(seq1, seq2):
             if token1 == '<*>':
                 numOfPar += 1
-                continue #comment@haixuanguo: <*> == <*> are similar pairs
+                continue  # comment@haixuanguo: <*> == <*> are similar pairs
             if token1 == token2:
                 simTokens += 1
 
@@ -218,7 +218,8 @@ class LogParser:
         occ_dict = dict(self.df_log['EventTemplate'].value_counts())
         df_event = pd.DataFrame()
         df_event['EventTemplate'] = self.df_log['EventTemplate'].unique()
-        df_event['EventId'] = df_event['EventTemplate'].map(lambda x: hashlib.md5(str(x).encode('utf-8')).hexdigest()[0:8])
+        df_event['EventId'] = df_event['EventTemplate'].map(
+            lambda x: hashlib.md5(str(x).encode('utf-8')).hexdigest()[0:8])
         df_event['Occurrences'] = df_event['EventTemplate'].map(occ_dict)
         df_event.to_csv(os.path.join(self.savePath, self.logName + '_templates.csv'), index=False,
                         columns=["EventId", "EventTemplate", "Occurrences"])
@@ -338,7 +339,7 @@ class LogParser:
         if "<*>" not in template_regex: return []
         template_regex = re.sub(r'([^A-Za-z0-9])', r'\\\1', template_regex)
         template_regex = re.sub(r' +', r'\\s+', template_regex)
-        template_regex = "^" + template_regex.replace("\<\*\>", "(.*?)") + "$"
+        template_regex = r"^" + template_regex.replace(r"<\*>", r"(.*?)") + r"$"
         parameter_list = re.findall(template_regex, row["Content"])
         parameter_list = parameter_list[0] if parameter_list else ()
         parameter_list = list(parameter_list) if isinstance(parameter_list, tuple) else [parameter_list]

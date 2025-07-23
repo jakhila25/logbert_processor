@@ -1,13 +1,16 @@
 import os
 import sys
+
+sys.path.append('../')
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # Ensure local logbert_processor and logparser are first in sys.path for all imports
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'logparser')))
+# sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'logparser')))
 
 from bert_pytorch.model.log_model import BERTLog
 from bert_pytorch.model.bert import BERT
 from bert_pytorch.dataset import LogDataset, WordVocab
-import Drain
+from logparser import Drain
 from torch.utils.data import DataLoader
 from collections import defaultdict
 from tqdm import tqdm
@@ -18,9 +21,11 @@ import time
 import json
 import ast
 import re
+
 # === Constants ===
 TOP_EVENTS = 5
 MAX_RCA_TOKENS = 200
+
 
 # === Log Parsing ===
 
@@ -52,6 +57,7 @@ def hadoop_sampling(structured_log_path, sequence_output_path):
     pd.DataFrame(list(data_dict.items()), columns=['AppId', 'EventSequence']).to_csv(
         sequence_output_path, index=False)
 
+
 # === Utility Functions ===
 
 
@@ -79,7 +85,7 @@ def load_parameters(param_path):
 
 def load_logbert_model(options, vocab):
     try:
-        return torch.load(options["model_path"], map_location=options["device"])
+        return torch.load(options["model_path"], map_location=options["device"], weights_only=False)
     except:
         bert = BERT(len(vocab), options["hidden"], options["layers"],
                     options["attn_heads"], options["max_len"])
@@ -90,7 +96,7 @@ def load_logbert_model(options, vocab):
 
 
 def load_center(path, device):
-    center = torch.load(path, map_location=device)
+    center = torch.load(path, map_location=device, weights_only=False)
     return center["center"] if isinstance(center, dict) else center
 
 
@@ -135,8 +141,6 @@ def generate_prompt(event_templates):
     return prompt
 
 
-
-
 def compute_logkey_anomaly(masked_output, masked_label, top_k=5):
     num_undetected = 0
     for i, token in enumerate(masked_label):
@@ -144,22 +148,33 @@ def compute_logkey_anomaly(masked_output, masked_label, top_k=5):
             num_undetected += 1
     return num_undetected, len(masked_label)
 
+
 # === API-Compatible RCA Pipeline ===
 
 
 def detect_anomalies_and_explain(input_log_path):
     log_file = os.path.basename(input_log_path)
     input_dir = os.path.dirname(input_log_path)
-    output_dir = os.path.abspath(os.path.join(
-        os.path.dirname(__file__), "model", "bert"))
 
-    log_structured_file = os.path.join(
-        output_dir, log_file + "_structured.csv")
+    # log_file = os.path.basename(input_log_path)
+    # input_dir = os.path.dirname(input_log_path)
+    output_dir = os.path.abspath(os.path.join(input_dir, "../../trained_models/Hadoop_logbert"))
+
+    log_structured_file = os.path.join(output_dir, log_file + "_structured.csv")
     log_templates_file = os.path.join(output_dir, log_file + "_templates.csv")
     log_sequence_file = os.path.join(output_dir, "rca_abnormal_sequence.csv")
     PARAMS_FILE = os.path.join(output_dir, "bert", "parameters.txt")
     CENTER_PATH = os.path.join(output_dir, "bert", "best_center.pt")
     TRAIN_FILE = os.path.join(output_dir, "train")
+
+    #
+    # log_structured_file = os.path.join(
+    #     output_dir, log_file + "_structured.csv")
+    # log_templates_file = os.path.join(output_dir, log_file + "_templates.csv")
+    # log_sequence_file = os.path.join(output_dir, "rca_abnormal_sequence.csv")
+    # PARAMS_FILE = os.path.join(output_dir, "bert", "parameters.txt")
+    # CENTER_PATH = os.path.join(output_dir, "bert", "best_center.pt")
+    # TRAIN_FILE = os.path.join(output_dir, "train")
 
     # Step 1: Preprocess Logs
     parse_log_with_drain(log_file, input_dir, output_dir)
@@ -169,7 +184,6 @@ def detect_anomalies_and_explain(input_log_path):
     options = load_parameters(PARAMS_FILE)
     options["device"] = torch.device(
         "cuda" if torch.cuda.is_available() else "cpu")
-
 
     vocab = WordVocab.load_vocab(options["vocab_path"])
     model = load_logbert_model(options, vocab).to(options["device"]).eval()
@@ -204,6 +218,7 @@ def detect_anomalies_and_explain(input_log_path):
         undetected_ratio = num_undetected / masked_total if masked_total else 0
 
         status = "Abnormal" if z_score > 2 or undetected_ratio > 0.5 else "Normal"
+        print(f"STATUS====={status}")
         if status == "Normal":
             continue
 

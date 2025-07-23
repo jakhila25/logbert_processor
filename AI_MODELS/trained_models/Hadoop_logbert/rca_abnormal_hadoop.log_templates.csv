@@ -1,0 +1,345 @@
+EventId,EventTemplate,Occurrences
+aa171447,Created MRAppMaster for application <*>,5
+3c5bb15c,Executing with tokens:,75
+c849bc2c,"Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: <*> cluster_timestamp: <*> } attemptId: <*> } keyId: <*>",5
+0594ecc2,Using mapred newApiCommitter.,5
+c0c8618d,OutputCommitter set in config null,5
+d79644a2,OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter,5
+3a2b3aef,Registering class <*> for class <*>,45
+7ced323b,Default file system [hdfs://msra-sa-41:9000],16
+3a03968c,Emitting job history data to the timeline server is not enabled,5
+198f3928,Recovery is enabled. Will try to recover from previous life on best effort basis.,1
+b405651e,Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/<*>/<*>_1.jhist,1
+f5694858,Read from history task <*>,1
+f3eee235,Read completed tasks from history 1,1
+ca7d7941,loaded properties from hadoop-metrics2.properties,75
+9e8ad6ab,Scheduled snapshot period at 10 second(s).,75
+fc657c96,MRAppMaster metrics system started,5
+9c396752,Adding job token for <*> to jobTokenSecretManager,5
+ce54fccc,Not uberizing <*> because: not enabled; too many maps; too much input;,5
+6ab7d897,Input size for job <*> = <*>. Number of splits = 10,5
+6519c35c,Number of reduces for job <*> = 1,5
+3514acb4,<*>Job Transitioned from <*> to <*>,21
+db930ec6,"MRAppMaster launching normal, non-uberized, multi-container job <*>.",5
+916d4a74,Using callQueue class java.util.concurrent.LinkedBlockingQueue,10
+192d0e3e,Starting Socket Reader #1 for port <*>,10
+8c4d0a72,Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server,5
+73b103d7,IPC Server listener on <*>: starting,10
+ccc17099,IPC Server Responder: starting,10
+81b07bff,Instantiated MRClientService at <*>,5
+a79a1702,Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog,5
+0859dbfb,Http request log for http.requests.mapreduce is not defined,5
+a8927e0e,Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter),5
+ae2086c0,Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context <*>,10
+c5e95c21,adding path spec: <*>,10
+8aa20788,Jetty bound to port <*>,5
+6b77fa65,jetty-6.1.26,5
+1205e906,Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to <*>,5
+37897a89,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>:<*>,5
+01425cf2,Web app /mapreduce started at <*>,5
+5ba9445a,Registered webapp guice modules,5
+6af6b73e,JOB_CREATE <*>,5
+8b1732f5,nodeBlacklistingEnabled:true,5
+17dc3b51,maxTaskFailuresPerNode is 3,5
+93a481e4,blacklistDisablePercent is 33,5
+c7f3ffdf,Connecting to ResourceManager at msra-sa-41/<*>:8030,5
+d0cf8682,"maxContainerCapability: <memory:8192, vCores:32>",5
+62365dbe,queue: default,5
+361211a0,Upper limit on the thread pool size is 500,5
+2b3d75c5,yarn.client.max-cached-nodemanagers-proxies : 0,5
+8825a75c,Processing the event EventType: <*>,22
+6659e8b0,Resolved <*> to /default-rack,262
+3be0b589,<*> Task Transitioned from <*> to <*>,143
+a4f4ef26,"Recovering task <*> from prior app attempt, status was SUCCEEDED",1
+c1fd6443,TaskAttempt: <*> using containerId: <*> on NM: <*>,80
+63fbbb87,<*> TaskAttempt Transitioned from <*> to <*>,355
+007ded00,Task succeeded with attempt <*>,35
+954065f5,"Event Writer setup for JobId: <*>, File: <*>",5
+3a2741bf,Num completed Tasks: <*>,35
+5f986200,"mapResourceRequest:<memory:1024, vCores:1>",5
+3da042e6,"reduceResourceRequest:<memory:1024, vCores:1>",5
+f1d41a8b,Before Scheduling: <*> <*> ScheduledReds:0 <*> <*> CompletedMaps:1 CompletedReds:0 <*> ContRel:0 <*> RackLocal:0,2
+c931b425,getResources() for application_<*>_0001: <*> release= 0 <*> finishedContainers=0 <*> <*> <*>,24
+bae0e03b,"Recalculating schedule, <*> <*>",167
+ec6b84b4,Reduce slow start threshold reached. Scheduling reduces.,5
+20df12d4,"completedMapPercent 0.1 totalResourceLimit:<memory:<*>, vCores:-2> finalMapResourceLimit:<memory:9216, vCores:9> finalReduceResourceLimit:<memory:<*>, vCores:-11> netScheduledMapResource:<memory:9216, vCores:9> netScheduledReduceResource:<memory:0, vCores:0>",1
+6ed15688,Ramping up 1,4
+2052de59,After Scheduling: PendingReds:0 <*> <*> <*> <*> CompletedMaps:1 CompletedReds:0 <*> ContRel:0 <*> RackLocal:0,3
+0f71bb1f,Got allocated containers <*>,57
+5e5f5ff9,Assigned container <*> to <*>,79
+7a1247db,The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/<*>/job.jar,5
+7863e753,The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/<*>/job.xml,5
+60d079c6,Adding #0 tokens and #1 secret keys for NM use for launching container,5
+a83c59ee,Size of containertokens_dob is 1,5
+944f8887,Putting shuffle token in serviceData,5
+9f1747b1,Processing the event EventType: <*> for container <*> taskAttempt <*>,131
+937a6ff8,Launching attempt_<*>_0001_m_000001_1000,1
+13d7e1b6,Launching attempt_<*>_0001_m_000006_1000,1
+0725fe43,Launching attempt_<*>_0001_m_000002_1000,1
+55ae9596,Launching attempt_<*>_0001_m_000007_1000,1
+f079c7b6,Launching attempt_<*>_0001_m_000000_1000,1
+b9b98c01,Launching attempt_<*>_0001_m_000008_1000,1
+d100d85f,Launching attempt_<*>_0001_m_000004_1000,1
+29a3a595,Launching attempt_<*>_0001_m_000003_1000,1
+ba81ed85,Launching attempt_<*>_0001_m_000005_1000,1
+fc9ef42a,Opening proxy : <*>,131
+f4ac93f2,Shuffle port returned by ContainerManager for <*> : <*>,79
+e215e532,ATTEMPT_START <*>,79
+ff65c706,Assigned to reduce,5
+b1aa8b2d,Launching attempt_<*>_0001_r_000000_1000,1
+71c7c3bf,Auth successful for <*> (auth:SIMPLE),95
+60675cee,JVM with ID : <*> asked for a task,79
+2a1c144a,JVM with ID: <*> given task: <*>,79
+c78095d6,MapCompletionEvents request from <*> startIndex <*> maxEvents <*>,789
+be4da74d,DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>,30
+1a8c09a8,Scheduling a redundant attempt for task <*>,22
+ebb03fa4,We launched 1 speculations. Sleeping <*> milliseconds.,30
+3670935b,Progress of TaskAttempt <*> is : <*>,3555
+eaac77da,After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> <*> <*> <*>,49
+50f0d272,Launching attempt_<*>_0001_m_000008_1001,1
+d50045aa,Before Scheduling: PendingReds:0 ScheduledMaps:1 ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> <*> <*> <*>,16
+e53592bf,Launching attempt_<*>_0001_m_000002_1001,1
+48500c4a,Launching attempt_<*>_0001_m_000000_1001,1
+d39dd8df,MapTask metrics system <*>,91
+8ece4dc3,"Kind: mapreduce.job, Service: <*>, Ident: <*>",70
+42bce2da,Sleeping for 0ms before retrying again. Got null now.,70
+4a1105fa,mapreduce.cluster.local.dir for child: <*>,70
+39006874,"session.id is deprecated. Instead, use dfs.metrics.session-id",70
+fc4324dd,ProcfsBasedProcessTree currently is supported only on Linux.,69
+ce10d82c,Using ResourceCalculatorProcessTree : <*>,69
+b063b233,Processing split: <*>,65
+f2f6eacf,(EQUATOR) <*> kvi <*>(<*>),422
+599850bf,mapreduce.task.io.sort.mb: 100,65
+fefbdbcf,soft limit at <*>,65
+8b5eb2a0,bufstart = 0; bufvoid = <*>,65
+6e49102f,kvstart = <*>; length = <*>,65
+e7eee7f1,Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer,65
+895d7761,Spilling map output,392
+b7c97b24,bufstart = <*> bufend = <*>; bufvoid = <*>,392
+5d50efee,kvstart = <*>(<*>); kvend = <*>(<*>); length = <*>/<*>,392
+cdf7dd93,Finished spill <*>,376
+7d6dcece,(RESET) equator <*> kv <*>(<*>) kvi <*>(<*>),341
+0491d81f,Starting flush of map output,38
+7707888f,Merging <*> sorted segments,38
+5be2cae8,"Down to the last merge-pass, with <*> segments left of total size: <*> bytes",38
+dfe6ae4e,<*> is done. And is in the process of committing,34
+cf0f4f26,Task <*> done.,34
+1f3b539d,Stopping MapTask metrics system...,25
+4ae2b9bb,MapTask metrics system shutdown complete.,25
+c66501a9,"Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: ""minint-fnanli5.fareast.corp.microsoft.com"":<*>;",10
+08b842ef,Retrying connect to server: <*> Already tried <*> time(s); maxRetries=45,847
+09dbac83,ReduceTask metrics system <*>,5
+e223c99a,Using ShuffleConsumerPlugin: <*>,4
+efe726a9,"MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=10, memToMemMergeOutputsThreshold=10",4
+1ad5a5a0,<*> Thread started: EventFetcher for fetching Map Completion Events,4
+1404cebf,<*> Got <*> new map-outputs,27
+25269816,Assigning <*> with <*> to <*>,28
+32b73354,assigned <*> of <*> to <*> to <*>,28
+156223b0,for <*> sent hash and received reply,28
+35525cf9,<*> Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>),31
+9ad20d76,<*> about to shuffle output of map <*> decomp: <*> len: <*> to DISK,31
+806d6f9b,Read <*> bytes from map-output for <*>,31
+f28f8b0a,<*> freed by <*> in <*>,28
+8b6ad6b4,Exception in getting events,1
+8a4817bd,"Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)",198
+14e6eab0,Before Scheduling: PendingReds:1 <*> ScheduledReds:0 <*> AssignedReds:0 <*> CompletedReds:0 <*> <*> HostLocal:0 <*>,6
+773f4a2b,Reduce slow start threshold not met. completedMapsForReduceSlowstart 1,162
+ffb8e2a9,After Scheduling: PendingReds:1 <*> ScheduledReds:0 <*> AssignedReds:0 CompletedMaps:0 CompletedReds:0 <*> <*> <*> <*>,29
+49732639,Launching attempt_<*>_0001_m_000000_0,1
+9a034b34,Launching attempt_<*>_0001_m_000001_0,1
+f1ee2765,Launching attempt_<*>_0001_m_000002_0,1
+62d16034,Launching attempt_<*>_0001_m_000004_0,1
+79ca2308,Launching attempt_<*>_0001_m_000003_0,1
+2e232ace,Launching attempt_<*>_0001_m_000005_0,1
+62b1d94b,Launching attempt_<*>_0001_m_000006_0,1
+6a7cabb6,Launching attempt_<*>_0001_m_000007_0,1
+badeadee,Launching attempt_<*>_0001_m_000008_0,1
+29c02d67,Launching attempt_<*>_0001_m_000009_0,1
+31cf9f34,Done acknowledgement from <*>,34
+97c18e95,KILLING attempt_<*>_0001_m_000009_0,1
+f72975d5,"completedMapPercent 0.1 totalResourceLimit:<memory:<*>, <*> finalMapResourceLimit:<memory:<*>, <*> <*> <*> netScheduledMapResource:<memory:<*>, <*> netScheduledReduceResource:<memory:0, vCores:0>",3
+fcee643e,After Scheduling: PendingReds:0 <*> ScheduledReds:1 <*> AssignedReds:0 CompletedMaps:1 CompletedReds:0 <*> <*> <*> <*>,8
+f244738e,getResources() for <*> <*> release= 0 newContainers=1 <*> <*> <*> knownNMs=5,4
+ba0e1b89,Received completed container <*>,52
+b0f66195,Diagnostics report from <*> Container killed by the ApplicationMaster.,42
+51a3cabf,Launching attempt_<*>_0001_m_000006_1,1
+47ffcf2d,Launching attempt_<*>_0001_r_000000_0,1
+4ba0444a,Launching attempt_<*>_0001_m_000005_1,1
+5683db8c,Launching attempt_<*>_0001_m_000003_1,1
+b2c6170a,Launching attempt_<*>_0001_m_000000_1,1
+d120a818,EventFetcher is interrupted.. Returning,3
+9ec77340,finalMerge called with 0 in-memory map-outputs and 10 on-disk map-outputs,3
+0b98b09e,"Merging 10 files, <*> bytes from disk",3
+ce9ca9c9,"Merging 0 segments, 0 bytes from memory into reduce",3
+9789556a,"mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords",3
+a018cf56,Exception in createBlockOutputStream,5
+d7593aef,Abandoning BP-<*>-<*>-<*>:blk_<*>_1726,1
+368d14a5,Excluding datanode <*>:<*>,5
+3766cffb,Task <*> is allowed to commit now,3
+e967b817,Saved output of task <*> to <*>,3
+0e5c4a3d,Stopping ReduceTask metrics system...,1
+17af1c22,ReduceTask metrics system shutdown complete.,1
+24493f27,getResources() for application_<*>_0012: ask=4 release= <*> <*> <*> <*> <*> knownNMs=5,9
+d998f71d,Launching attempt_<*>_0012_m_000000_0,1
+73059a27,Launching attempt_<*>_0012_m_000001_0,1
+11643cb0,Launching attempt_<*>_0012_m_000002_0,1
+03690f13,Launching attempt_<*>_0012_m_000003_0,1
+0acbb9c9,Launching attempt_<*>_0012_m_000004_0,1
+df385da8,Launching attempt_<*>_0012_m_000005_0,1
+e274ac02,Launching attempt_<*>_0012_m_000006_0,1
+36547e6b,Launching attempt_<*>_0012_m_000007_0,1
+49128ad5,"Releasing unassigned and invalid container Container: [ContainerId: <*>_0012_01_000012, NodeId: MININT-75DGDAM1.fareast.corp.microsoft.com:<*>, NodeHttpAddress: MININT-75DGDAM1.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: <*>:<*> }, ]. RM may have assignment issues",1
+9c92758d,Launching attempt_<*>_0012_m_000008_0,1
+e74e51db,Launching attempt_<*>_0012_m_000009_0,1
+6e9283be,Container complete event for unknown container id <*>_0012_01_000012,1
+51188096,Socket Reader #1 for port <*>: readAndProcess from client <*> threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host],16
+8c061dfd,KILLING attempt_<*>_0012_m_000009_0,1
+361b758c,Launching attempt_<*>_0012_m_000003_1,1
+2214cfd5,Launching attempt_<*>_0012_r_000000_0,1
+131cd6bf,getResources() for <*> <*> release= 0 newContainers=0 finishedContainers=0 <*> <*> <*>,29
+b64a4d6c,Launching attempt_<*>_0012_m_000005_1,1
+3d2c570b,Abandoning BP-<*>-<*>-<*>:blk_<*>_1712,1
+1517ffed,Launching attempt_<*>_0012_m_000008_1,1
+49fe4675,Launching attempt_<*>_0012_m_000001_1,1
+3c0e347e,Launching attempt_<*>_0012_m_000004_1,1
+5dc9e8e7,Launching attempt_<*>_0012_m_000006_1,1
+d0dae040,KILLING attempt_<*>_0012_m_000002_0,1
+ace25c92,Before Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> AssignedReds:1 <*> <*> ContAlloc:18 ContRel:1 HostLocal:6 RackLocal:10,10
+ef889d7e,KILLING attempt_<*>_0012_m_000000_0,1
+c121e4f7,KILLING attempt_<*>_0012_m_000003_1,1
+b4c03c0a,Issuing kill to other attempt <*>,15
+3b689c40,KILLING attempt_<*>_0012_m_000003_0,1
+f7558028,Diagnostics report from <*>,4
+d9b9a5de,KILLING attempt_<*>_0012_m_000008_1,1
+25409aa0,KILLING attempt_<*>_0012_m_000008_0,1
+3c3f9fe9,KILLING attempt_<*>_0012_m_000005_1,1
+d873dede,KILLING attempt_<*>_0012_m_000005_0,1
+d432cdca,KILLING attempt_<*>_0012_m_000001_1,1
+4695534e,KILLING attempt_<*>_0012_m_000001_0,1
+1b450dbf,KILLING attempt_<*>_0012_m_000004_1,1
+98982148,KILLING attempt_<*>_0012_m_000004_0,1
+1511363c,Could not delete <*>,16
+78fcdf76,KILLING attempt_<*>_0012_m_000007_0,1
+00c11b0b,KILLING attempt_<*>_0012_m_000006_0,1
+d9c80b4f,KILLING attempt_<*>_0012_m_000006_1,1
+71c3d1dc,Commit-pending state update from <*>,3
+7d812712,<*> given a go for committing the task output.,3
+3650dc5c,Commit go/no-go request from <*>,3
+fe6107f0,Result of canCommit for <*>,3
+2a3a6e52,KILLING attempt_<*>_0012_r_000000_0,1
+81e00d20,Calling handler for JobFinishedEvent,3
+dad8f9fa,We are finishing cleanly so this is the last retry,3
+0e4885bd,Notify RMCommunicator isAMLastRetry: true,3
+b2ea851d,RMCommunicator notified that shouldUnregistered is: true,3
+17e59cfa,Notify JHEH isAMLastRetry: true,3
+b288d94f,JobHistoryEventHandler notified that forceJobCompletion is true,3
+2784eb31,Calling stop for all the services,3
+027f63ae,Stopping JobHistoryEventHandler. Size of the outstanding queue size is 0,3
+de83b5b5,Copying <*> to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging,6
+e180c0c9,After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> AssignedReds:0 CompletedMaps:10 CompletedReds:1 <*> <*> <*> <*>,3
+5f3c00ba,Abandoning BP-<*>-<*>-<*>:blk_<*>_1730,1
+a218aeb7,Copied to done location: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging,6
+26ba31a1,Moved tmp to done: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging,9
+6de59625,Stopped JobHistoryEventHandler. super.stop(),3
+15022d1f,Killing <*> because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:<*>,5
+14101cba,Diagnostics report from <*> Container released on a *lost* node,5
+6cd1a0f2,Abandoning BP-<*>-<*>-<*>:blk_<*>_2890,1
+b52e6932,Launching attempt_<*>_0002_m_000002_0,1
+68d83295,Launching attempt_<*>_0002_m_000000_0,1
+49b63b04,Launching attempt_<*>_0002_m_000006_0,1
+317b09af,Launching attempt_<*>_0002_m_000004_0,1
+9319a29d,Launching attempt_<*>_0002_m_000001_0,1
+250e8aa6,Launching attempt_<*>_0002_m_000003_0,1
+581031fb,Launching attempt_<*>_0002_m_000005_0,1
+bee75d1d,Launching attempt_<*>_0002_m_000007_0,1
+69d2a68f,Launching attempt_<*>_0002_m_000008_0,1
+e14db0d0,"getResources() for <*> <*> release= 0 <*> <*> resourcelimit=<memory:0, vCores:-27> knownNMs=4",15
+ebcaf59e,Launching attempt_<*>_0002_m_000009_0,1
+77f70c6a,KILLING attempt_<*>_0002_m_000009_0,1
+8115b8d5,Before Scheduling: <*> <*> <*> <*> AssignedReds:0 <*> CompletedReds:0 ContAlloc:10 ContRel:0 HostLocal:9 RackLocal:1,4
+28e777aa,All maps assigned. Ramping up all remaining reduces:1,1
+3158c77d,KILLING attempt_<*>_0002_m_000005_0,1
+5482f345,KILLING attempt_<*>_0002_m_000008_0,1
+b4138d64,After Scheduling: PendingReds:0 ScheduledMaps:1 <*> <*> <*> <*> CompletedReds:0 <*> ContRel:0 <*> RackLocal:1,3
+94d949c2,KILLING attempt_<*>_0002_m_000003_0,1
+b64b3bad,Launching attempt_<*>_0002_r_000000_0,1
+a7c24988,Launching attempt_<*>_0002_m_000001_1,1
+4e36c505,KILLING attempt_<*>_0002_m_000007_0,1
+bd01b25e,Launching attempt_<*>_0002_m_000000_1,1
+d68c3953,Launching attempt_<*>_0002_m_000002_1,1
+eabef6cb,Launching attempt_<*>_0002_m_000004_1,1
+ad351269,KILLING attempt_<*>_0002_m_000000_1,1
+990a5d3c,KILLING attempt_<*>_0002_m_000000_0,1
+9d54cb87,Before Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 <*> <*> <*> ContRel:0 HostLocal:13 <*>,7
+2d926fa6,KILLING attempt_<*>_0002_m_000001_1,1
+24d39649,KILLING attempt_<*>_0002_m_000001_0,1
+f13d238d,Launching attempt_<*>_0002_m_000006_1,1
+d471da9b,KILLING attempt_<*>_0002_m_000002_1,1
+e4fa1c0b,KILLING attempt_<*>_0002_m_000002_0,1
+8ef364c1,KILLING attempt_<*>_0002_m_000006_0,1
+7b500a18,KILLING attempt_<*>_0002_m_000006_1,1
+4dfd3fcc,KILLING attempt_<*>_0002_m_000004_0,1
+1f365a99,KILLING attempt_<*>_0002_m_000004_1,1
+4eb81c0e,"Slow ReadProcessor read fields took 48957ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [<*>:<*>, <*>:<*>]",1
+b41d9df2,DFSOutputStream ResponseProcessor exception for block BP-<*>-<*>-<*>:blk_<*>_2878,1
+17336afc,"Error Recovery for block BP-<*>-<*>-<*>:blk_<*>_2878 in pipeline <*>:<*>, <*>:<*>: bad datanode <*>:<*>",1
+991db3d7,KILLING attempt_<*>_0002_r_000000_0,1
+e946c96f,Abandoning BP-<*>-<*>-<*>:blk_<*>_2924,1
+9ae352d7,Setting job diagnostics to,2
+c45e2735,History url is <*>,2
+fd178178,Waiting for application to be successfully unregistered.,2
+4bee4dfc,Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 <*> CompletedMaps:10 CompletedReds:1 <*> ContRel:0 <*> <*>,2
+77b96a15,Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/<*>,2
+fa5d86c2,Stopping server on <*>,2
+da6217eb,Stopping IPC Server listener on <*>,2
+8429e6cc,Stopping IPC Server Responder,2
+f495a4dd,TaskHeartbeatHandler thread interrupted,2
+bc6e0e71,Ignoring obsolete output of <*> map-task: <*>,3
+b99c6b8e,Runnning cleanup for the task,2
+64bd454b,Launching attempt_<*>_0015_m_000000_0,1
+66f6ba75,Launching attempt_<*>_0015_m_000001_0,1
+f7ca4b8c,Launching attempt_<*>_0015_m_000002_0,1
+8ce3be15,Launching attempt_<*>_0015_m_000003_0,1
+752b1dd6,Launching attempt_<*>_0015_m_000004_0,1
+98c9d2ac,Launching attempt_<*>_0015_m_000005_0,1
+d533fc93,Launching attempt_<*>_0015_m_000006_0,1
+83218309,Launching attempt_<*>_0015_m_000007_0,1
+cb0d6d38,Launching attempt_<*>_0015_m_000008_0,1
+96ee42e2,Launching attempt_<*>_0015_m_000009_0,1
+a28cf59b,Task: <*> - exited : java.io.IOException: There is not enough space on the disk,4
+34ea6faa,Diagnostics report from <*> Error: java.io.IOException: There is not enough space on the disk,8
+8ebc1c05,KILLING attempt_<*>_0015_m_000005_0,1
+a04663ff,KILLING attempt_<*>_0015_m_000006_0,1
+d2bc910f,Task: <*> - exited : java.io.IOException: Spill failed,2
+b7d2bfa2,Diagnostics report from <*> Error: java.io.IOException: Spill failed,4
+9df637a2,<*> failures on node 04DN8IQ.fareast.corp.microsoft.com,2
+410c36f9,Added <*> to list of failed maps,3
+30e2a694,Before Scheduling: PendingReds:1 <*> ScheduledReds:0 AssignedMaps:10 AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 HostLocal:5 RackLocal:5,2
+76402887,getResources() for application_<*>_0015: <*> release= 0 <*> <*> <*> <*> knownNMs=4,5
+13ed2f94,"Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: <*>:<*> }, ] to fast fail map",3
+a275647a,Assigned from earlierFailedMaps,3
+8af4a920,Launching attempt_<*>_0015_m_000006_1,1
+645e3603,Launching attempt_<*>_0015_m_000005_1,1
+acd71244,KILLING attempt_<*>_0015_m_000009_0,1
+12b79308,Launching attempt_<*>_0015_m_000004_1,1
+99b85ba5,Launching attempt_<*>_0015_r_000000_0,1
+db45af87,Launching attempt_<*>_0015_m_000003_1,1
+6ea1d7c3,Launching attempt_<*>_0015_m_000008_1,1
+bcdd698f,Launching attempt_<*>_0015_m_000005_2,1
+21bb9417,KILLING attempt_<*>_0015_m_000002_0,1
+3f6e889e,KILLING attempt_<*>_0015_m_000001_0,1
+e75a8ed4,Before Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 <*> <*> <*> ContRel:0 <*> RackLocal:6,11
+f9acd7ca,KILLING attempt_<*>_0015_m_000000_0,1
+48eeba10,KILLING attempt_<*>_0015_m_000007_0,1
+bf8df2fa,KILLING attempt_<*>_0015_m_000003_1,1
+aff77870,Launching attempt_<*>_0015_m_000003_2,1
+9c4c15c7,KILLING attempt_<*>_0015_m_000006_1,1
+e4db0db8,KILLING attempt_<*>_0015_m_000004_1,1
+3fc64ade,KILLING attempt_<*>_0015_m_000004_0,1
+1e2d7cc7,KILLING attempt_<*>_0015_m_000005_1,1
+9ed59f01,KILLING attempt_<*>_0015_m_000005_2,1
+b842ab95,KILLING attempt_<*>_0015_m_000008_1,1
+6c5bc033,KILLING attempt_<*>_0015_m_000008_0,1
+bb57bb0d,KILLING attempt_<*>_0015_m_000003_0,1
+a69208f6,KILLING attempt_<*>_0015_m_000003_2,1
+93ab874f,KILLING attempt_<*>_0015_r_000000_0,1

@@ -1,0 +1,1395 @@
+EventId,EventTemplate,Occurrences
+ca7d7941,loaded properties from hadoop-metrics2.properties,903
+9e8ad6ab,Scheduled snapshot period at 10 second(s).,903
+d39dd8df,MapTask metrics system <*>,1049
+3c5bb15c,Executing with tokens:,903
+8ece4dc3,"Kind: mapreduce.job, Service: <*>, Ident: <*>",839
+42bce2da,Sleeping for 0ms before retrying again. Got null now.,839
+4a1105fa,mapreduce.cluster.local.dir for child: <*>,837
+39006874,"session.id is deprecated. Instead, use dfs.metrics.session-id",837
+fc4324dd,ProcfsBasedProcessTree currently is supported only on Linux.,836
+ce10d82c,Using ResourceCalculatorProcessTree : <*>,836
+b063b233,Processing split: <*>,769
+f2f6eacf,(EQUATOR) <*> kvi <*>(<*>),5120
+599850bf,mapreduce.task.io.sort.mb: 100,769
+fefbdbcf,soft limit at <*>,769
+8b5eb2a0,bufstart = 0; bufvoid = <*>,769
+6e49102f,kvstart = <*>; length = <*>,769
+e7eee7f1,Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer,769
+895d7761,Spilling map output,4947
+b7c97b24,bufstart = <*> bufend = <*>; bufvoid = <*>,4947
+5d50efee,kvstart = <*>(<*>); kvend = <*>(<*>); length = <*>/<*>,4947
+cdf7dd93,Finished spill <*>,4828
+7d6dcece,(RESET) equator <*> kv <*>(<*>) kvi <*>(<*>),4238
+0491d81f,Starting flush of map output,606
+7707888f,Merging <*> sorted segments,640
+5be2cae8,"Down to the last merge-pass, with <*> segments left of total size: <*> bytes",640
+dfe6ae4e,<*> is done. And is in the process of committing,591
+cf0f4f26,Task <*> done.,582
+09dbac83,ReduceTask metrics system <*>,81
+e223c99a,Using ShuffleConsumerPlugin: <*>,67
+efe726a9,"MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=10, memToMemMergeOutputsThreshold=10",67
+1ad5a5a0,<*> Thread started: EventFetcher for fetching Map Completion Events,67
+1404cebf,<*> Got <*> new map-outputs,387
+25269816,Assigning <*> with <*> to <*>,444
+32b73354,assigned <*> of <*> to <*> to <*>,444
+156223b0,for <*> sent hash and received reply,441
+35525cf9,<*> Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>),636
+9ad20d76,<*> about to shuffle output of map <*> decomp: <*> len: <*> to DISK,633
+806d6f9b,Read <*> bytes from map-output for <*>,618
+f28f8b0a,<*> freed by <*> in <*>,427
+d120a818,EventFetcher is interrupted.. Returning,51
+8d376f37,finalMerge called with 0 in-memory map-outputs and <*> on-disk map-outputs,53
+105acdeb,"Merging <*> files, <*> bytes from disk",53
+ce9ca9c9,"Merging 0 segments, 0 bytes from memory into reduce",53
+9789556a,"mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords",53
+3766cffb,Task <*> is allowed to commit now,45
+e967b817,Saved output of task <*> to <*>,45
+aa171447,Created MRAppMaster for application <*>,64
+c849bc2c,"Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: <*> cluster_timestamp: <*> } attemptId: <*> } keyId: <*>",64
+0594ecc2,Using mapred newApiCommitter.,64
+c0c8618d,OutputCommitter set in config null,64
+d79644a2,OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter,64
+3a2b3aef,Registering class <*> for class <*>,576
+7ced323b,Default file system [hdfs://msra-sa-41:9000],210
+3a03968c,Emitting job history data to the timeline server is not enabled,64
+fc657c96,MRAppMaster metrics system started,64
+9c396752,Adding job token for <*> to jobTokenSecretManager,64
+ce54fccc,Not uberizing <*> because: not enabled; too many maps; too much input;,64
+7b90175f,Input size for job <*> = <*>. Number of splits = <*>,64
+6519c35c,Number of reduces for job <*> = 1,64
+3514acb4,<*>Job Transitioned from <*> to <*>,285
+db930ec6,"MRAppMaster launching normal, non-uberized, multi-container job <*>.",64
+916d4a74,Using callQueue class java.util.concurrent.LinkedBlockingQueue,128
+192d0e3e,Starting Socket Reader #1 for port <*>,128
+8c4d0a72,Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server,64
+ccc17099,IPC Server Responder: starting,128
+0c5b0a59,IPC Server listener on <*> starting,128
+81b07bff,Instantiated MRClientService at <*>,64
+a79a1702,Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog,64
+0859dbfb,Http request log for http.requests.mapreduce is not defined,64
+a8927e0e,Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter),64
+ae2086c0,Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context <*>,128
+c5e95c21,adding path spec: <*>,128
+8aa20788,Jetty bound to port <*>,64
+6b77fa65,jetty-6.1.26,64
+1205e906,Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to <*>,64
+37897a89,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>:<*>,61
+01425cf2,Web app /mapreduce started at <*>,64
+5ba9445a,Registered webapp guice modules,64
+6af6b73e,JOB_CREATE <*>,64
+8b1732f5,nodeBlacklistingEnabled:true,64
+17dc3b51,maxTaskFailuresPerNode is 3,64
+93a481e4,blacklistDisablePercent is 33,64
+4de40bfa,Connecting to ResourceManager at <*>,64
+d0cf8682,"maxContainerCapability: <memory:8192, vCores:32>",64
+62365dbe,queue: default,64
+361211a0,Upper limit on the thread pool size is 500,64
+2b3d75c5,yarn.client.max-cached-nodemanagers-proxies : 0,64
+8825a75c,Processing the event EventType: <*>,313
+6659e8b0,Resolved <*> to /default-rack,3035
+3be0b589,<*> Task Transitioned from <*> to <*>,1931
+63fbbb87,<*> TaskAttempt Transitioned from <*> to <*>,4488
+5f986200,"mapResourceRequest:<memory:1024, vCores:1>",60
+3da042e6,"reduceResourceRequest:<memory:1024, vCores:1>",64
+954065f5,"Event Writer setup for JobId: <*>, File: <*>",64
+64499391,Before Scheduling: PendingReds:1 <*> ScheduledReds:0 <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 <*> <*>,59
+a22da155,"getResources() for <*> <*> release= 0 <*> <*> resourcelimit=<memory:<*>, <*> knownNMs=4",91
+bae0e03b,"Recalculating schedule, <*> <*>",4248
+773f4a2b,Reduce slow start threshold not met. completedMapsForReduceSlowstart 1,3679
+0f71bb1f,Got allocated containers <*>,549
+5e5f5ff9,Assigned container <*> to <*>,827
+634b7e31,After Scheduling: <*> <*> <*> AssignedMaps:10 AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 <*> RackLocal:0,34
+7a1247db,The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/<*>/job.jar,64
+7863e753,The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/<*>/job.xml,64
+60d079c6,Adding #0 tokens and #1 secret keys for NM use for launching container,64
+a83c59ee,Size of containertokens_dob is 1,64
+944f8887,Putting shuffle token in serviceData,64
+9f1747b1,Processing the event EventType: <*> for container <*> taskAttempt <*>,1613
+fa1db732,Launching attempt_<*>_0019_m_000005_0,1
+26a25403,Launching attempt_<*>_0019_m_000000_0,2
+c82e5939,Launching attempt_<*>_0019_m_000008_0,1
+15d6fd37,Launching attempt_<*>_0019_m_000006_0,1
+08b4364c,Launching attempt_<*>_0019_m_000002_0,1
+92d50f92,Launching attempt_<*>_0019_m_000004_0,1
+4f092be0,Launching attempt_<*>_0019_m_000001_0,2
+0a2e3bc3,Launching attempt_<*>_0019_m_000009_0,1
+09005c5e,Launching attempt_<*>_0019_m_000003_0,1
+90706fba,Launching attempt_<*>_0019_m_000007_0,1
+fc9ef42a,Opening proxy : <*>,1626
+f4ac93f2,Shuffle port returned by ContainerManager for <*> : <*>,827
+c1fd6443,TaskAttempt: <*> using containerId: <*> on NM: <*>,953
+e215e532,ATTEMPT_START <*>,826
+71c7c3bf,Auth successful for <*> (auth:SIMPLE),867
+60675cee,JVM with ID : <*> asked for a task,823
+2a1c144a,JVM with ID: <*> given task: <*>,823
+3670935b,Progress of TaskAttempt <*> is : <*>,42327
+31cf9f34,Done acknowledgement from <*>,571
+5da84dc4,KILLING attempt_<*>_0019_m_000009_0,1
+007ded00,Task succeeded with attempt <*>,666
+3a2741bf,Num completed Tasks: <*>,666
+be4da74d,DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>,225
+ebb03fa4,We launched 1 speculations. Sleeping <*> milliseconds.,225
+1a8c09a8,Scheduling a redundant attempt for task <*>,172
+ec6b84b4,Reduce slow start threshold reached. Scheduling reduces.,60
+1c821b28,"completedMapPercent <*> totalResourceLimit:<memory:<*>, <*> finalMapResourceLimit:<memory:<*>, <*> <*> <*> netScheduledMapResource:<memory:<*>, <*> netScheduledReduceResource:<memory:0, vCores:0>",4
+6ed15688,Ramping up 1,27
+ba0e1b89,Received completed container <*>,774
+b0f66195,Diagnostics report from <*> Container killed by the ApplicationMaster.,691
+66f53f3a,Launching attempt_<*>_0019_m_000004_1,1
+ff65c706,Assigned to reduce,68
+eaac77da,After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> <*> <*> <*>,576
+173ba45a,Launching attempt_<*>_0019_r_000000_0,1
+c78095d6,MapCompletionEvents request from <*> startIndex <*> maxEvents <*>,17351
+ceedbd54,Before Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> ContRel:0 <*> <*>,355
+f887cba9,Launching attempt_<*>_0019_m_000008_1,1
+70522b0a,Launching attempt_<*>_0019_m_000006_1,1
+9d946ee0,KILLING attempt_<*>_0019_m_000005_0,1
+29eec9df,KILLING attempt_<*>_0019_m_000007_0,1
+95d8f8c9,KILLING attempt_<*>_0019_m_000003_0,1
+b449c267,KILLING attempt_<*>_0019_m_000004_0,1
+b4c03c0a,Issuing kill to other attempt <*>,167
+024b18a9,KILLING attempt_<*>_0019_m_000004_1,1
+1511363c,Could not delete <*>,200
+4674b6aa,Socket Reader #1 for port <*> readAndProcess from client <*> threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host],201
+cc188600,KILLING attempt_<*>_0019_m_000002_0,1
+dc39a2fc,KILLING attempt_<*>_0019_m_000001_0,1
+478cb244,KILLING attempt_<*>_0019_m_000000_0,1
+cc69d9d0,KILLING attempt_<*>_0019_m_000008_0,1
+5152984a,KILLING attempt_<*>_0019_m_000008_1,1
+3bb5c0cb,KILLING attempt_<*>_0019_m_000006_0,1
+94dddc1b,KILLING attempt_<*>_0019_m_000006_1,1
+71c3d1dc,Commit-pending state update from <*>,44
+7d812712,<*> given a go for committing the task output.,44
+3650dc5c,Commit go/no-go request from <*>,44
+fe6107f0,Result of canCommit for <*>,44
+56654be9,KILLING attempt_<*>_0019_r_000000_0,1
+81e00d20,Calling handler for JobFinishedEvent,44
+dad8f9fa,We are finishing cleanly so this is the last retry,47
+9f79897c,Notify RMCommunicator isAMLastRetry: <*>,49
+0d329d05,RMCommunicator notified that shouldUnregistered is: <*>,49
+cf25703d,Notify JHEH isAMLastRetry: <*>,49
+c1b01598,JobHistoryEventHandler notified that forceJobCompletion is <*>,49
+2784eb31,Calling stop for all the services,49
+c02382a8,Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>,49
+de83b5b5,Copying <*> to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging,88
+a218aeb7,Copied to done location: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging,88
+26ba31a1,Moved tmp to done: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging,132
+6de59625,Stopped JobHistoryEventHandler. super.stop(),45
+9ae352d7,Setting job diagnostics to,46
+c45e2735,History url is <*>,46
+fd178178,Waiting for application to be successfully unregistered.,43
+8eafe63c,Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 <*> CompletedMaps:10 <*> <*> <*> <*> <*>,32
+77b96a15,Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/<*>,43
+fa5d86c2,Stopping server on <*>,46
+da6217eb,Stopping IPC Server listener on <*>,46
+8429e6cc,Stopping IPC Server Responder,46
+f495a4dd,TaskHeartbeatHandler thread interrupted,46
+9319a29d,Launching attempt_<*>_0002_m_000001_0,4
+317b09af,Launching attempt_<*>_0002_m_000004_0,4
+581031fb,Launching attempt_<*>_0002_m_000005_0,4
+250e8aa6,Launching attempt_<*>_0002_m_000003_0,4
+ebcaf59e,Launching attempt_<*>_0002_m_000009_0,4
+69d2a68f,Launching attempt_<*>_0002_m_000008_0,4
+bee75d1d,Launching attempt_<*>_0002_m_000007_0,4
+b52e6932,Launching attempt_<*>_0002_m_000002_0,4
+49b63b04,Launching attempt_<*>_0002_m_000006_0,4
+68d83295,Launching attempt_<*>_0002_m_000000_0,4
+77f70c6a,KILLING attempt_<*>_0002_m_000009_0,4
+28e777aa,All maps assigned. Ramping up all remaining reduces:1,42
+34afaf04,After Scheduling: PendingReds:0 <*> <*> <*> <*> <*> CompletedReds:0 <*> ContRel:0 HostLocal:10 RackLocal:0,24
+b64b3bad,Launching attempt_<*>_0002_r_000000_0,4
+990a5d3c,KILLING attempt_<*>_0002_m_000000_0,4
+4dfd3fcc,KILLING attempt_<*>_0002_m_000004_0,4
+94d949c2,KILLING attempt_<*>_0002_m_000003_0,4
+8ef364c1,KILLING attempt_<*>_0002_m_000006_0,4
+e4fa1c0b,KILLING attempt_<*>_0002_m_000002_0,4
+4e36c505,KILLING attempt_<*>_0002_m_000007_0,4
+3158c77d,KILLING attempt_<*>_0002_m_000005_0,4
+5482f345,KILLING attempt_<*>_0002_m_000008_0,4
+24d39649,KILLING attempt_<*>_0002_m_000001_0,4
+eff2f8ad,Killing <*> because it is running on unusable <*>,50
+14101cba,Diagnostics report from <*> Container released on a *lost* node,50
+991db3d7,KILLING attempt_<*>_0002_r_000000_0,2
+63af22f3,"getResources() for <*> <*> release= 0 <*> finishedContainers=0 resourcelimit=<memory:<*>, <*> <*>",119
+3f013f13,Launching attempt_<*>_0002_r_000000_1,1
+8d7038b8,KILLING attempt_<*>_0002_r_000000_1,1
+cfcab835,Launching attempt_<*>_0002_r_000000_2,1
+6f06167c,KILLING attempt_<*>_0002_r_000000_2,1
+ffb8e2a9,After Scheduling: PendingReds:1 <*> ScheduledReds:0 <*> AssignedReds:0 CompletedMaps:0 CompletedReds:0 <*> <*> <*> <*>,236
+9f809a97,Launching attempt_<*>_0017_m_000000_0,2
+11ca7e95,Launching attempt_<*>_0017_m_000001_0,2
+1c5427b6,Launching attempt_<*>_0017_m_000002_0,2
+11332c7b,Launching attempt_<*>_0017_m_000003_0,2
+8a4f7af0,getResources() for <*> <*> release= 0 <*> finishedContainers=0 <*> <*> knownNMs=5,75
+27407993,Launching attempt_<*>_0017_m_000004_0,2
+ddca0cf9,Launching attempt_<*>_0017_m_000005_0,2
+6abc38e0,Launching attempt_<*>_0017_m_000006_0,2
+0bc344e4,Launching attempt_<*>_0017_m_000007_0,2
+3a16f378,Launching attempt_<*>_0017_m_000009_0,2
+1c697c8c,Launching attempt_<*>_0017_m_000008_0,2
+dbbc4b79,KILLING attempt_<*>_0017_m_000009_0,2
+21ffba5c,After Scheduling: PendingReds:0 ScheduledMaps:0 <*> AssignedMaps:10 <*> CompletedMaps:1 CompletedReds:0 <*> <*> <*> <*>,21
+6ebcd482,Before Scheduling: PendingReds:0 ScheduledMaps:1 <*> <*> <*> CompletedMaps:1 CompletedReds:0 <*> ContRel:0 <*> <*>,20
+74c6a029,Launching attempt_<*>_0017_r_000000_0,2
+e2d257e1,Launching attempt_<*>_0017_m_000005_1,1
+2ab142f3,Launching attempt_<*>_0017_m_000007_1,1
+72285e92,Launching attempt_<*>_0017_m_000006_1,1
+166ae9e2,Launching attempt_<*>_0017_m_000001_1,2
+2f236b75,Launching attempt_<*>_0017_m_000003_1,1
+144f357b,KILLING attempt_<*>_0017_m_000000_0,2
+0f358610,KILLING attempt_<*>_0017_m_000006_0,2
+426345c9,KILLING attempt_<*>_0017_m_000006_1,1
+30117410,KILLING attempt_<*>_0017_m_000003_1,1
+3c2c96c8,KILLING attempt_<*>_0017_m_000003_0,2
+6e49c3ba,KILLING attempt_<*>_0017_m_000007_0,2
+6d8b13d1,KILLING attempt_<*>_0017_m_000007_1,1
+9f74a909,KILLING attempt_<*>_0017_m_000001_0,2
+26e7573d,KILLING attempt_<*>_0017_m_000001_1,2
+facee3df,KILLING attempt_<*>_0017_m_000005_0,2
+6fa0d269,KILLING attempt_<*>_0017_m_000005_1,1
+e1b6242e,Diagnostics report from <*> <*> Timed out after 600 secs,7
+bb0a8df2,KILLING attempt_<*>_0017_m_000002_0,2
+08b842ef,Retrying connect to server: <*> Already tried <*> time(s); maxRetries=45,1670
+dc4c943b,KILLING attempt_<*>_0017_m_000008_0,2
+e0c2c645,KILLING attempt_<*>_0017_m_000004_0,2
+8a4817bd,"Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)",850
+1f3b539d,Stopping MapTask metrics system...,277
+4ae2b9bb,MapTask metrics system shutdown complete.,277
+bc6e0e71,Ignoring obsolete output of <*> map-task: <*>,81
+0e5c4a3d,Stopping ReduceTask metrics system...,14
+17af1c22,ReduceTask metrics system shutdown complete.,14
+ac5a1890,Launching attempt_<*>_0003_m_000009_0,5
+a6e05d0a,Launching attempt_<*>_0003_m_000001_0,5
+c9b08466,Launching attempt_<*>_0003_m_000007_0,5
+89a7c906,Launching attempt_<*>_0003_m_000005_0,5
+84d85a7e,Launching attempt_<*>_0003_m_000004_0,5
+aa69bac9,Launching attempt_<*>_0003_m_000002_0,5
+1827c193,Launching attempt_<*>_0003_m_000008_0,5
+01215542,getResources() for application_<*>_0003: <*> release= 0 <*> <*> <*> <*> knownNMs=4,56
+566f22db,Launching attempt_<*>_0003_m_000000_0,5
+0f64f2e2,Launching attempt_<*>_0003_m_000003_0,5
+93d3e9cf,Launching attempt_<*>_0003_m_000006_0,5
+a3076a5e,"Cannot assign container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:1024, vCores:1>, Priority: <*> Token: Token { kind: ContainerToken, service: <*>:<*> }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true",12
+17f40d09,getResources() for <*> <*> release= <*> newContainers=0 finishedContainers=1 <*> <*> knownNMs=4,23
+85b23688,Container complete event for unknown container id <*>,18
+0fd1aba9,KILLING attempt_<*>_0003_m_000009_0,5
+1c5075f0,Before Scheduling: <*> <*> <*> <*> AssignedReds:0 <*> CompletedReds:0 ContAlloc:11 ContRel:1 HostLocal:7 RackLocal:3,10
+928d6c01,After Scheduling: PendingReds:0 ScheduledMaps:1 <*> <*> <*> <*> CompletedReds:0 <*> ContRel:1 <*> RackLocal:3,6
+37d3f12a,KILLING attempt_<*>_0003_m_000008_0,5
+b1c1ecaf,KILLING attempt_<*>_0003_m_000003_0,5
+a1dfa295,KILLING attempt_<*>_0003_m_000001_0,5
+16ab0bdd,KILLING attempt_<*>_0003_m_000005_0,5
+72b7b714,Launching attempt_<*>_0003_r_000000_0,5
+9856f43e,Launching attempt_<*>_0003_m_000000_1,2
+d94f3218,Before Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> ContRel:1 <*> <*>,60
+86e01931,Launching attempt_<*>_0003_m_000006_1,4
+d51e0621,Launching attempt_<*>_0003_m_000004_1,2
+8ca16673,Launching attempt_<*>_0003_m_000007_1,3
+245dc21f,KILLING attempt_<*>_0003_m_000006_1,4
+4a4eb822,KILLING attempt_<*>_0003_m_000004_1,2
+11244803,KILLING attempt_<*>_0003_m_000000_1,2
+217bdbfb,KILLING attempt_<*>_0003_m_000000_0,5
+89474ed0,After Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> ContRel:1 <*> <*>,20
+752622ec,"IPC Server handler 29 on <*>, call statusUpdate(attempt_<*>_0003_m_000000_0, org.apache.hadoop.mapred.MapTaskStatus@cdcdbf7), rpc version=2, client version=19, methodsFingerPrint=<*> from <*>:<*> Call#68 Retry#0: output error",1
+c9c0e783,IPC Server handler 29 on <*> caught an exception,1
+b29ce047,Launching attempt_<*>_0003_m_000006_2,1
+c56d5ff0,Launching attempt_<*>_0003_m_000004_2,1
+179ad97c,KILLING attempt_<*>_0003_m_000007_1,3
+f2bd709d,KILLING attempt_<*>_0003_m_000007_0,5
+242ae3d6,KILLING attempt_<*>_0003_m_000002_0,5
+9d9571f2,KILLING attempt_<*>_0003_m_000004_0,5
+8d845a48,KILLING attempt_<*>_0003_m_000004_2,1
+c128f10e,KILLING attempt_<*>_0003_m_000006_0,5
+8da66b29,KILLING attempt_<*>_0003_m_000006_2,1
+0c1e59eb,KILLING attempt_<*>_0003_r_000000_0,5
+eef07bb3,Before Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> AssignedReds:1 <*> <*> ContAlloc:18 <*> HostLocal:9 <*>,9
+4d54b095,After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> <*> CompletedMaps:10 <*> ContAlloc:18 <*> <*> <*>,5
+e0276aca,Launching attempt_<*>_0020_m_000000_0,3
+3c640111,getResources() for application_<*>_0020: <*> release= 0 <*> finishedContainers=0 <*> <*> <*>,35
+d5b148f3,Launching attempt_<*>_0020_m_000001_0,3
+d535e4d6,Launching attempt_<*>_0020_m_000002_0,3
+dea16de8,Launching attempt_<*>_0020_m_000003_0,3
+18b640ba,Launching attempt_<*>_0020_m_000004_0,3
+8a746f42,Launching attempt_<*>_0020_m_000005_0,3
+060edaae,Launching attempt_<*>_0020_m_000006_0,3
+ceb9a7f6,Launching attempt_<*>_0020_m_000007_0,3
+84947c5f,Launching attempt_<*>_0020_m_000008_0,3
+22a18a76,Launching attempt_<*>_0020_m_000009_0,3
+3e626edd,KILLING attempt_<*>_0020_m_000003_0,3
+c8ced535,Address change detected. Old: <*> New: <*>,5795
+78939ff3,Failed to renew lease for <*> for <*> seconds. Will retry shortly ...,5300
+ea0c6e3a,"Slow ReadProcessor read fields took <*> (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [<*>:<*>, <*>:<*>]",8
+e6d2bc87,DFSOutputStream ResponseProcessor exception for block <*>,13
+7bbf5562,"Error Recovery for block <*> in pipeline <*>:<*>, <*>:<*>: bad datanode <*>:<*>",13
+2ef07439,DataStreamer Exception,3
+b4ff2357,ERROR IN CONTACTING RM.,480
+44c82a06,Task: <*> - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,2
+811a1e12,Diagnostics report from <*> Error: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,4
+e1ead005,KILLING attempt_<*>_0020_m_000002_0,3
+fb4ab5cb,Task cleanup failed for attempt <*>,2
+16ffd5a6,Error writing History Event: <*>,4
+584a76a0,"Thread Thread[eventHandlingThread,5,main] threw an Exception.",3
+0e4be9d6,<*> failures on node <*>,8
+410c36f9,Added <*> to list of failed maps,7
+13235407,KILLING attempt_<*>_0020_m_000001_0,3
+78876e8e,Could not contact RM after <*> milliseconds.,3
+2d1bcd62,Error communicating with RM: Could not contact RM after <*> milliseconds.,3
+4a3798b7,"In stop, writing event <*>",6
+66621f8a,Service JobHistoryEventHandler failed in state STOPPED; cause: org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected.,1
+0a179c82,When stopping the service JobHistoryEventHandler : org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected.,1
+70ef1e20,KILLING attempt_<*>_0020_m_000006_0,3
+b9c6ff52,cleanup failed for container <*> : java.lang.IllegalArgumentException: java.net.UnknownHostException: <*>,12
+d2223fdd,KILLING attempt_<*>_0020_m_000007_0,3
+62fbe130,Diagnostics report from <*> cleanup failed for container <*> : java.lang.IllegalArgumentException: java.net.UnknownHostException: <*>,12
+fe881893,KILLING attempt_<*>_0020_m_000004_0,3
+25a1e076,KILLING attempt_<*>_0020_m_000008_0,3
+a552c84e,KILLING attempt_<*>_0020_m_000000_0,3
+5859c76e,KILLING attempt_<*>_0020_m_000005_0,3
+3c6016b7,KILLING attempt_<*>_0020_m_000009_0,3
+625aadcb,Exception while unregistering,3
+7d76b35b,Final Stats: PendingReds:0 ScheduledMaps:3 ScheduledReds:1 AssignedMaps:9 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:11 ContRel:1 HostLocal:7 RackLocal:3,1
+81190c6b,Skipping cleaning up the staging dir. assuming AM will be retried.,3
+8b7d000b,Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state STOPPED; cause: org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected.,1
+98ad1203,Graceful stop failed,3
+c379abfc,Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>,34
+198f3928,Recovery is enabled. Will try to recover from previous life on best effort basis.,14
+b405651e,Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/<*>/<*>_1.jhist,18
+f5694858,Read from history task <*>,95
+34e334b2,Read completed tasks from history <*>,10
+a4f4ef26,"Recovering task <*> from prior app attempt, status was SUCCEEDED",95
+37d34f0b,"completedMapPercent 0.1 <*> <*> <*> <*> <*> <*> netScheduledMapResource:<memory:9216, vCores:9> netScheduledReduceResource:<memory:0, vCores:0>",75
+0445a860,After Scheduling: PendingReds:1 <*> ScheduledReds:0 <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 <*> <*>,20
+1126a2b7,Launching attempt_<*>_0020_m_000001_1000,1
+884bff2f,Launching attempt_<*>_0020_m_000000_1000,1
+4031e805,Launching attempt_<*>_0020_m_000004_1000,1
+ae040e09,Launching attempt_<*>_0020_m_000002_1000,1
+45eeaa73,Launching attempt_<*>_0020_m_000005_1000,1
+c308f539,Launching attempt_<*>_0020_m_000006_1000,1
+6158da2a,Launching attempt_<*>_0020_m_000007_1000,1
+8760258f,Launching attempt_<*>_0020_m_000008_1000,1
+55c44939,After Scheduling: PendingReds:0 <*> <*> AssignedMaps:9 <*> CompletedMaps:1 CompletedReds:0 <*> <*> <*> RackLocal:4,3
+edfde835,Launching attempt_<*>_0020_m_000009_1000,1
+4e1e83b9,Launching attempt_<*>_0020_r_000000_1000,1
+e0ab8258,Launching attempt_<*>_0020_m_000000_1001,1
+f4742ecf,Launching attempt_<*>_0020_m_000008_1001,1
+10b36a96,Launching attempt_<*>_0020_m_000007_1001,1
+ad2f61b6,Launching attempt_<*>_0020_m_000005_1001,1
+fc1fda40,Launching attempt_<*>_0020_m_000006_1001,1
+c7958a1d,Launching attempt_<*>_0020_m_000009_1001,1
+b6b48366,Launching attempt_<*>_0020_m_000001_1001,1
+df324fbc,KILLING attempt_<*>_0020_m_000004_1000,1
+d850894e,KILLING attempt_<*>_0020_m_000000_1000,1
+8aa9cb73,KILLING attempt_<*>_0020_m_000000_1001,1
+029c74f6,Launching attempt_<*>_0020_m_000002_1001,1
+2551a26a,getResources() for <*> ask=4 release= 0 newContainers=0 <*> <*> <*> <*>,144
+f046b15b,KILLING attempt_<*>_0020_m_000001_1000,1
+89967812,KILLING attempt_<*>_0020_m_000001_1001,1
+accde829,KILLING attempt_<*>_0020_m_000002_1000,1
+b631f9b0,KILLING attempt_<*>_0020_m_000002_1001,1
+b8c312c6,KILLING attempt_<*>_0020_m_000008_1000,1
+affbd663,KILLING attempt_<*>_0020_m_000008_1001,1
+fad5ac0e,KILLING attempt_<*>_0020_m_000005_1001,1
+b12babea,KILLING attempt_<*>_0020_m_000005_1000,1
+a6dfecb5,KILLING attempt_<*>_0020_m_000006_1001,1
+c7209418,KILLING attempt_<*>_0020_m_000006_1000,1
+9f86a541,KILLING attempt_<*>_0020_m_000009_1000,1
+42df04b9,KILLING attempt_<*>_0020_m_000009_1001,1
+7f6d5ddc,KILLING attempt_<*>_0020_m_000007_1000,1
+1bab6f3e,KILLING attempt_<*>_0020_m_000007_1001,1
+7e821d90,KILLING attempt_<*>_0020_r_000000_1000,1
+4ccea502,I/O error constructing remote block reader.,16
+938a0856,"Failed to connect to /<*>:<*> for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information",10
+a1baaaff,"Could not obtain <*> from any node: java.io.IOException: No live nodes contain block <*> after checking nodes = [<*>:<*>, <*>:<*>], ignoredNodes = null No live nodes contain current block Block locations: <*>:<*> <*>:<*> Dead nodes: <*>:<*> <*>:<*>. Will get new block locations from namenode and retry...",5
+d012f973,"DFS chooseDataNode: got # 1 IOException, will wait for <*> msec.",6
+8a08c061,DFS Read,3
+7cec9f06,Exception running child : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,2
+b99c6b8e,Runnning cleanup for the task,4
+54544868,Exception cleaning up: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,2
+b7d5a75d,Failure sending status update: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>,4
+7313aeb8,Launching attempt_<*>_0013_m_000000_0,2
+2123f00d,Launching attempt_<*>_0013_m_000002_0,2
+5f66255f,Launching attempt_<*>_0013_m_000003_0,2
+dd42b25f,Launching attempt_<*>_0013_m_000001_0,2
+e12187eb,Launching attempt_<*>_0013_m_000004_0,2
+6eaab7bf,Launching attempt_<*>_0013_m_000005_0,2
+916ea144,Launching attempt_<*>_0013_m_000006_0,2
+f92b0c00,Launching attempt_<*>_0013_m_000007_0,2
+d6977aa1,Launching attempt_<*>_0013_m_000008_0,2
+5d668aa1,"Releasing unassigned and invalid container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: <*>:<*> }, ]. RM may have assignment issues",6
+9049e289,Launching attempt_<*>_0013_m_000009_0,2
+37efede1,getResources() for <*> ask=4 release= <*> newContainers=1 <*> <*> <*> knownNMs=5,3
+2dec4107,getResources() for <*> <*> release= 1 newContainers=0 finishedContainers=1 <*> <*> knownNMs=5,6
+23a63b1d,"Unable to parse prior job history, aborting recovery",4
+a0380f1e,Could not parse the old history file. Will not have old AMinfos,4
+d822ec1e,Launching attempt_<*>_0013_m_000005_1000,1
+4098d372,Launching attempt_<*>_0013_m_000009_1000,1
+8d31a611,Launching attempt_<*>_0013_m_000002_1000,1
+e0021a1c,Launching attempt_<*>_0013_m_000007_1000,1
+f4bf7285,Launching attempt_<*>_0013_m_000006_1000,1
+633a3a4c,Launching attempt_<*>_0013_m_000003_1000,1
+4bc0f77b,Launching attempt_<*>_0013_m_000008_1000,1
+86090dbe,Launching attempt_<*>_0013_m_000001_1000,1
+8933c3bc,Launching attempt_<*>_0013_m_000004_1000,1
+76562f4b,Launching attempt_<*>_0013_m_000000_1000,1
+4716275a,KILLING attempt_<*>_0013_m_000009_1000,1
+10ea9686,Launching attempt_<*>_0013_m_000008_1001,1
+9cd6a322,Launching attempt_<*>_0013_r_000000_1000,1
+cb4906ee,Launching attempt_<*>_0013_m_000003_1001,1
+8bebe468,Launching attempt_<*>_0013_m_000005_1001,1
+5e34a1aa,Launching attempt_<*>_0013_m_000000_1001,1
+31a61185,KILLING attempt_<*>_0013_m_000004_1000,1
+c2e1cd46,KILLING attempt_<*>_0013_m_000006_1000,1
+9bab1074,KILLING attempt_<*>_0013_m_000007_1000,1
+c57284b7,KILLING attempt_<*>_0013_m_000001_1000,1
+ef2ab215,KILLING attempt_<*>_0013_m_000002_1000,1
+66de50cd,KILLING attempt_<*>_0013_m_000000_1000,1
+7d2b7fff,KILLING attempt_<*>_0013_m_000000_1001,1
+0be8f835,KILLING attempt_<*>_0013_m_000003_1000,1
+dbe856e2,KILLING attempt_<*>_0013_m_000003_1001,1
+de3a8b5c,KILLING attempt_<*>_0013_m_000005_1000,1
+837df42c,KILLING attempt_<*>_0013_m_000005_1001,1
+8b5927d3,KILLING attempt_<*>_0013_m_000008_1000,1
+8afd8848,KILLING attempt_<*>_0013_m_000008_1001,1
+a8e9da10,KILLING attempt_<*>_0013_r_000000_1000,1
+04865c94,Before Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:1 <*> <*> <*> <*>,33
+62cca54e,Before Scheduling: <*> ScheduledMaps:1 <*> <*> AssignedReds:0 <*> CompletedReds:0 ContAlloc:12 ContRel:2 HostLocal:4 RackLocal:6,4
+25a1b4d1,"completedMapPercent 0.2 <*> <*> <*> <*> <*> vCores:-5> netScheduledMapResource:<memory:9216, vCores:9> netScheduledReduceResource:<memory:0, vCores:0>",2
+d0d79e8b,After Scheduling: PendingReds:0 <*> ScheduledReds:1 <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:2 <*> <*>,6
+ea166ab4,"getResources() for <*> <*> release= 0 <*> <*> resourcelimit=<memory:0, vCores:-35> knownNMs=5",87
+0d55bf0e,Before Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> ContRel:2 <*> <*>,45
+e7b0278b,Launching attempt_<*>_0003_m_000005_1,2
+cf3ebf28,Launching attempt_<*>_0003_m_000008_1,3
+f76da67c,KILLING attempt_<*>_0003_m_000005_1,2
+0e75bc96,KILLING attempt_<*>_0003_m_000008_1,3
+a018cf56,Exception in createBlockOutputStream,25
+6ff2853b,Abandoning BP-<*>-<*>-<*>:blk_<*>_1855,1
+368d14a5,Excluding datanode <*>:<*>,25
+27ee0bb7,Abandoning BP-<*>-<*>-<*>:blk_<*>_1851,1
+91c8784e,Merging 4 intermediate segments out of a total of 13,7
+dfb8444a,Abandoning BP-<*>-<*>-<*>:blk_<*>_2097,1
+f1ee2765,Launching attempt_<*>_0001_m_000002_0,4
+49732639,Launching attempt_<*>_0001_m_000000_0,4
+2e232ace,Launching attempt_<*>_0001_m_000005_0,4
+9a034b34,Launching attempt_<*>_0001_m_000001_0,4
+b00bfa17,Launching attempt_<*>_0001_m_000012_0,1
+79ca2308,Launching attempt_<*>_0001_m_000003_0,4
+62b1d94b,Launching attempt_<*>_0001_m_000006_0,4
+badeadee,Launching attempt_<*>_0001_m_000008_0,4
+6a7cabb6,Launching attempt_<*>_0001_m_000007_0,4
+62d16034,Launching attempt_<*>_0001_m_000004_0,4
+29c02d67,Launching attempt_<*>_0001_m_000009_0,4
+3d02ed23,Launching attempt_<*>_0001_m_000011_0,1
+f9157e85,Launching attempt_<*>_0001_m_000010_0,1
+2d22b42d,KILLING attempt_<*>_0001_m_000004_0,4
+3d42a708,After Scheduling: PendingReds:0 <*> ScheduledReds:1 <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 <*> <*>,71
+cd75a3a5,KILLING attempt_<*>_0001_m_000007_0,4
+dea9bf67,KILLING attempt_<*>_0001_m_000003_0,4
+6f3c40b7,Before Scheduling: PendingReds:0 <*> ScheduledReds:1 <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 <*> <*>,51
+b2c6170a,Launching attempt_<*>_0001_m_000000_1,3
+e946983d,KILLING attempt_<*>_0001_m_000002_0,4
+6de716a8,KILLING attempt_<*>_0001_m_000001_0,4
+c6cc4652,KILLING attempt_<*>_0001_m_000006_0,4
+47ffcf2d,Launching attempt_<*>_0001_r_000000_0,4
+ab9e66de,Launching attempt_<*>_0001_m_000012_1,1
+45a5cf2e,Launching attempt_<*>_0001_m_000008_1,1
+3b4258f4,KILLING attempt_<*>_0001_m_000000_1,3
+599a4f09,KILLING attempt_<*>_0001_m_000000_0,4
+f195a11a,Launching attempt_<*>_0001_m_000010_1,1
+cf50fb6a,After Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> ContRel:0 <*> <*>,71
+4ba0444a,Launching attempt_<*>_0001_m_000005_1,1
+5932a086,KILLING attempt_<*>_0001_m_000012_1,1
+e720162c,KILLING attempt_<*>_0001_m_000012_0,1
+1830304d,Launching attempt_<*>_0001_m_000011_1,1
+31701a31,KILLING attempt_<*>_0001_m_000008_1,1
+ba2354fa,KILLING attempt_<*>_0001_m_000008_0,4
+1943e68a,KILLING attempt_<*>_0001_m_000010_1,1
+1fa1c9fe,KILLING attempt_<*>_0001_m_000010_0,1
+1a23636d,KILLING attempt_<*>_0001_m_000005_1,1
+54a2932a,KILLING attempt_<*>_0001_m_000005_0,4
+97c18e95,KILLING attempt_<*>_0001_m_000009_0,4
+1cb2a652,KILLING attempt_<*>_0001_m_000011_0,1
+08e9c3cc,KILLING attempt_<*>_0001_m_000011_1,1
+77de7fd6,TaskAttempt killed because it ran on unusable node <*> <*>,25
+8630755a,Launching attempt_<*>_0001_m_000009_1,1
+f849d922,Launching attempt_<*>_0001_m_000011_2,1
+dd4f9671,Launching attempt_<*>_0001_m_000009_2,1
+e291471a,KILLING attempt_<*>_0001_r_000000_0,4
+a0129d0b,After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> AssignedReds:0 <*> <*> <*> ContRel:0 <*> <*>,16
+f36afd58,KILLING attempt_<*>_0001_m_000011_2,1
+f406f0d7,Before Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:0 <*> <*> <*> ContRel:0 <*> RackLocal:4,3
+bf75c1a3,KILLING attempt_<*>_0001_m_000009_1,1
+381dfb45,KILLING attempt_<*>_0001_m_000009_2,1
+4fad46a3,Abandoning BP-<*>-<*>-<*>:blk_<*>_2121,1
+a29742c1,Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 <*> <*> <*> <*> ContRel:0 <*> <*>,12
+9f7ed9de,Launching attempt_<*>_0021_m_000003_0,1
+36c6a7cc,Launching attempt_<*>_0021_m_000007_0,1
+011c6755,Launching attempt_<*>_0021_m_000004_0,1
+4af1d384,Launching attempt_<*>_0021_m_000002_0,1
+b005b138,Launching attempt_<*>_0021_m_000001_0,1
+4efc44b5,Launching attempt_<*>_0021_m_000009_0,1
+d3645300,Launching attempt_<*>_0021_m_000006_0,1
+f1b3398f,Launching attempt_<*>_0021_m_000000_0,1
+58151c1c,Launching attempt_<*>_0021_m_000005_0,1
+f484081f,Launching attempt_<*>_0021_m_000008_0,1
+c8d8402e,KILLING attempt_<*>_0021_m_000009_0,1
+1a8d1964,KILLING attempt_<*>_0021_m_000008_0,1
+69cf9ab2,KILLING attempt_<*>_0021_m_000004_0,1
+395116b4,KILLING attempt_<*>_0021_m_000003_0,1
+61fae7a1,KILLING attempt_<*>_0021_m_000000_0,1
+2d49a999,Launching attempt_<*>_0021_r_000000_0,1
+131cd6bf,getResources() for <*> <*> release= 0 newContainers=0 finishedContainers=0 <*> <*> <*>,24
+8be466d1,Launching attempt_<*>_0021_m_000001_1,1
+86561bba,KILLING attempt_<*>_0021_m_000006_0,1
+8678bd36,KILLING attempt_<*>_0021_m_000007_0,1
+b3a7a8d4,KILLING attempt_<*>_0021_m_000002_0,1
+1d1bf265,KILLING attempt_<*>_0021_m_000005_0,1
+4ffa8a97,KILLING attempt_<*>_0021_m_000001_0,1
+8ca39b9b,KILLING attempt_<*>_0021_m_000001_1,1
+c3854a25,KILLING attempt_<*>_0021_r_000000_0,1
+4e031e32,Connection retry failed with 4 attempts in 180 seconds,1
+44b2f203,Failed to connect to MININT-FNANLI5.fareast.corp.microsoft.com:<*> with 1 map outputs,1
+3f51ed8d,Reporting fetch failure for attempt_<*>_0004_m_000005_0 to jobtracker.,1
+721fc5ae,Launching attempt_<*>_0004_r_000000_1000,1
+c65beb3a,Launching attempt_<*>_0004_m_000002_1000,1
+739727fa,Launching attempt_<*>_0004_m_000004_1000,1
+e5910630,Launching attempt_<*>_0004_m_000009_1000,1
+4738abf9,Launching attempt_<*>_0004_m_000002_1001,1
+2f7559f1,Launching attempt_<*>_0004_m_000009_1001,1
+04ef2a2b,KILLING attempt_<*>_0004_m_000004_1000,1
+6a44b84f,KILLING attempt_<*>_0004_m_000009_1000,1
+0be44dca,KILLING attempt_<*>_0004_m_000009_1001,1
+d076e191,KILLING attempt_<*>_0004_m_000002_1000,1
+dbcb544f,KILLING attempt_<*>_0004_m_000002_1001,1
+7802bb18,Ramping down all scheduled reduces:0,100
+6e6828d7,Going to preempt 1 due to lack of space for maps,100
+1ea0748f,Preempting attempt_<*>_0004_r_000000_1000,1
+faa3fff1,KILLING attempt_<*>_0004_r_000000_1000,1
+04717c2b,Before Scheduling: PendingReds:1 <*> ScheduledReds:0 AssignedMaps:0 <*> <*> CompletedReds:0 <*> ContRel:0 <*> RackLocal:0,53
+9c7d8659,"completedMapPercent 0.<*> totalResourceLimit:<memory:1024, vCores:-12> finalMapResourceLimit:<memory:512, vCores:-6> finalReduceResourceLimit:<memory:512, vCores:-6> netScheduledMapResource:<memory:1024, vCores:1> netScheduledReduceResource:<memory:1024, vCores:1>",1
+5eebb907,Reduce preemption successful attempt_<*>_0004_r_000000_1000,1
+4576a919,Launching attempt_<*>_0004_m_000005_1000,1
+c3d40e79,Launching attempt_<*>_0004_r_000000_1001,1
+40e85f74,KILLING attempt_<*>_0004_m_000005_1000,1
+6c77e8e1,KILLING attempt_<*>_0004_r_000000_1001,1
+00bd949b,Launching attempt_<*>_0004_m_000010_0,1
+315059c7,Launching attempt_<*>_0004_m_000001_0,4
+a4e0d4aa,Launching attempt_<*>_0004_m_000003_0,4
+c7e26132,Launching attempt_<*>_0004_m_000006_0,4
+706dddc0,Launching attempt_<*>_0004_m_000007_0,4
+d03fb68d,Launching attempt_<*>_0004_m_000009_0,4
+97560444,Launching attempt_<*>_0004_m_000004_0,4
+d5266e1a,Launching attempt_<*>_0004_m_000002_0,4
+5241459f,Launching attempt_<*>_0004_m_000005_0,4
+766c75f8,Launching attempt_<*>_0004_m_000000_0,4
+d9f38f58,Launching attempt_<*>_0004_m_000008_0,4
+fc8d768a,Launching attempt_<*>_0004_m_000012_0,1
+632a6f9d,Launching attempt_<*>_0004_m_000011_0,1
+eb055e5c,KILLING attempt_<*>_0004_m_000010_0,1
+6412b5f8,Before Scheduling: <*> <*> <*> AssignedMaps:13 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:14 ContRel:1 HostLocal:10 RackLocal:3,2
+e747cdf0,After Scheduling: PendingReds:0 <*> <*> <*> <*> CompletedMaps:1 CompletedReds:0 <*> ContRel:1 HostLocal:10 RackLocal:3,3
+fbb06f20,Launching attempt_<*>_0004_r_000000_0,4
+922db85f,KILLING attempt_<*>_0004_m_000001_0,4
+14b4f26f,KILLING attempt_<*>_0004_m_000011_0,1
+37c340b5,Launching attempt_<*>_0004_m_000000_1,4
+620f7119,KILLING attempt_<*>_0004_m_000003_0,4
+40d5728f,KILLING attempt_<*>_0004_m_000006_0,4
+f4a21c3a,KILLING attempt_<*>_0004_m_000007_0,4
+c3a515aa,KILLING attempt_<*>_0004_m_000008_0,4
+fc5a864d,KILLING attempt_<*>_0004_m_000012_0,1
+72f18d83,KILLING attempt_<*>_0004_m_000000_1,4
+c1a8c09d,KILLING attempt_<*>_0004_m_000000_0,4
+0bd884a8,Launching attempt_<*>_0004_m_000007_1,1
+744f79c8,KILLING attempt_<*>_0004_m_000002_0,4
+3d8470d7,KILLING attempt_<*>_0004_m_000004_0,4
+b46cf7e7,KILLING attempt_<*>_0004_m_000009_0,4
+dfe60bf9,Launching attempt_<*>_0004_m_000003_1,2
+042ebf66,KILLING attempt_<*>_0004_m_000007_1,1
+0648ed27,Launching attempt_<*>_0004_m_000008_1,1
+715c983c,getResources() for <*> <*> release= 0 <*> finishedContainers=0 <*> <*> knownNMs=4,47
+ac272351,Launching attempt_<*>_0004_m_000006_1,3
+5dca0efe,Launching attempt_<*>_0004_m_000012_1,1
+53818fe5,Launching attempt_<*>_0004_m_000003_2,2
+8a26b73f,KILLING attempt_<*>_0004_m_000005_0,4
+f7558028,Diagnostics report from <*>,15
+e053f7bd,KILLING attempt_<*>_0004_m_000006_1,3
+7d496127,KILLING attempt_<*>_0004_m_000008_1,1
+6b085b96,KILLING attempt_<*>_0004_m_000012_1,1
+84e0af65,KILLING attempt_<*>_0004_m_000003_2,2
+7a2e0cdd,KILLING attempt_<*>_0004_m_000003_1,2
+56f1f7d9,Error communicating with RM: Resource Manager doesn't recognize AttemptId: <*>,2
+f28a43ae,Launching attempt_<*>_0004_m_000002_1,1
+5e2ea4a8,After Scheduling: PendingReds:0 <*> <*> <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 HostLocal:9 <*>,4
+7df952ac,KILLING attempt_<*>_0004_r_000000_0,3
+9574b22a,"completedMapPercent 0.2 totalResourceLimit:<memory:9216, vCores:-18> finalMapResourceLimit:<memory:7373, vCores:-15> finalReduceResourceLimit:<memory:1843, vCores:-3> netScheduledMapResource:<memory:<*>, <*> netScheduledReduceResource:<memory:0, vCores:0>",2
+ed8ccc16,Launching attempt_<*>_0004_r_000000_1,1
+d71e6369,Launching attempt_<*>_0004_m_000006_2,1
+dc0fbff0,KILLING attempt_<*>_0004_m_000002_1,1
+1d6b6293,KILLING attempt_<*>_0004_m_000006_2,1
+a7a812a8,KILLING attempt_<*>_0004_r_000000_1,1
+188c8a78,Launching attempt_<*>_0016_m_000002_0,2
+d6be0d64,Launching attempt_<*>_0016_m_000004_0,2
+9de1a159,Launching attempt_<*>_0016_m_000007_0,2
+9f49f72f,Launching attempt_<*>_0016_m_000001_0,2
+c21c9ef5,Launching attempt_<*>_0016_m_000006_0,2
+6bb3be34,Launching attempt_<*>_0016_m_000000_0,2
+a5d594d3,Launching attempt_<*>_0016_m_000008_0,2
+bdd6664f,Launching attempt_<*>_0016_m_000005_0,2
+d24fe965,Launching attempt_<*>_0016_m_000003_0,2
+c706a62f,Launching attempt_<*>_0016_m_000009_0,2
+ee75ce20,KILLING attempt_<*>_0016_m_000009_0,2
+f244738e,getResources() for <*> <*> release= 0 newContainers=1 <*> <*> <*> knownNMs=5,4
+c22cafa2,Launching attempt_<*>_0016_m_000000_1,1
+047b1490,Launching attempt_<*>_0016_r_000000_0,2
+5725a9ac,Launching attempt_<*>_0016_m_000004_1,2
+125df76b,Launching attempt_<*>_0016_m_000002_1,1
+4524eaaa,KILLING attempt_<*>_0016_m_000007_0,2
+f36323aa,KILLING attempt_<*>_0016_m_000006_0,2
+c8cd0b45,KILLING attempt_<*>_0016_m_000008_0,2
+5738e21f,KILLING attempt_<*>_0016_m_000002_0,2
+63f47bb7,KILLING attempt_<*>_0016_m_000002_1,1
+dcdd36c2,KILLING attempt_<*>_0016_m_000003_0,2
+2cf60ca9,KILLING attempt_<*>_0016_m_000001_0,2
+5d344062,KILLING attempt_<*>_0016_m_000004_0,2
+a79cb8db,KILLING attempt_<*>_0016_m_000004_1,2
+6695c883,KILLING attempt_<*>_0016_m_000005_0,2
+630d8e37,KILLING attempt_<*>_0016_m_000000_0,2
+d3d8a982,KILLING attempt_<*>_0016_m_000000_1,1
+99f1426a,MapCompletionEvents reques,1
+62461f94,Abandoning BP-<*>-<*>-<*>:blk_<*>_2287,1
+5da9f649,Abandoning BP-<*>-<*>-<*>:blk_<*>_2253,1
+b9185fde,Launching attempt_<*>_0008_r_000000_1000,1
+795f4578,KILLING attempt_<*>_0008_r_000000_1000,1
+f357d96a,Launching attempt_<*>_0008_m_000005_0,1
+de2f0717,Launching attempt_<*>_0008_m_000001_0,1
+e42de3ae,Launching attempt_<*>_0008_m_000008_0,1
+6401f57b,Launching attempt_<*>_0008_m_000000_0,1
+64d8053c,Launching attempt_<*>_0008_m_000002_0,1
+6cf1719f,Launching attempt_<*>_0008_m_000003_0,1
+c17082d2,Launching attempt_<*>_0008_m_000004_0,1
+8aabe536,Launching attempt_<*>_0008_m_000006_0,1
+d4b4c574,Launching attempt_<*>_0008_m_000007_0,1
+22b0451c,Launching attempt_<*>_0008_m_000009_0,1
+e481d007,KILLING attempt_<*>_0008_m_000003_0,1
+046ebc38,getResources() for <*> <*> release= 0 newContainers=0 finishedContainers=1 <*> <*> <*>,8
+6c6f03b3,KILLING attempt_<*>_0008_m_000002_0,1
+be010744,KILLING attempt_<*>_0008_m_000000_0,1
+9a15136f,KILLING attempt_<*>_0008_m_000004_0,1
+01ea56bc,Launching attempt_<*>_0008_r_000000_0,1
+8a0fdd1a,Launching attempt_<*>_0008_m_000009_1,1
+10d41fb9,KILLING attempt_<*>_0008_m_000006_0,1
+61157bcb,KILLING attempt_<*>_0008_m_000007_0,1
+88d22221,KILLING attempt_<*>_0008_m_000005_0,1
+e7d4b2b7,KILLING attempt_<*>_0008_m_000008_0,1
+28fb554c,KILLING attempt_<*>_0008_m_000009_0,1
+35df722e,KILLING attempt_<*>_0008_m_000009_1,1
+9947aef1,KILLING attempt_<*>_0008_m_000001_0,1
+422c1b92,Launching attempt_<*>_0009_m_000000_0,1
+b5920ebd,Launching attempt_<*>_0009_m_000008_0,1
+bfb36076,Launching attempt_<*>_0009_m_000001_0,1
+c4525650,Launching attempt_<*>_0009_m_000009_0,1
+265df575,Launching attempt_<*>_0009_m_000007_0,1
+0e382609,Launching attempt_<*>_0009_m_000004_0,1
+18573683,Launching attempt_<*>_0009_m_000005_0,1
+673016f1,Launching attempt_<*>_0009_m_000006_0,1
+8984da32,Launching attempt_<*>_0009_m_000003_0,1
+b9d3b4d9,Launching attempt_<*>_0009_m_000002_0,1
+0b4eae39,KILLING attempt_<*>_0009_m_000008_0,1
+6ab7cfb1,KILLING attempt_<*>_0009_m_000001_0,1
+ba7aa1d7,KILLING attempt_<*>_0009_m_000005_0,1
+446a5b9b,KILLING attempt_<*>_0009_m_000003_0,1
+3d72ca26,KILLING attempt_<*>_0009_m_000000_0,1
+d57fde30,KILLING attempt_<*>_0009_m_000006_0,1
+d2aaab1f,KILLING attempt_<*>_0009_m_000009_0,1
+dcc813af,Launching attempt_<*>_0009_r_000000_0,1
+bfa1c54d,Launching attempt_<*>_0009_m_000004_1,1
+cfd6bc0d,Launching attempt_<*>_0009_m_000003_1,1
+014629aa,Launching attempt_<*>_0009_m_000000_1,1
+89e5994d,Launching attempt_<*>_0009_m_000006_1,1
+9a8b86ef,Launching attempt_<*>_0009_m_000006_2,1
+e3967356,KILLING attempt_<*>_0009_m_000004_0,1
+12b76c53,KILLING attempt_<*>_0009_m_000004_1,1
+046dc3b1,KILLING attempt_<*>_0009_m_000007_0,1
+80b0e688,KILLING attempt_<*>_0009_m_000002_0,1
+a29bdbb8,KILLING attempt_<*>_0009_m_000003_1,1
+ba502e3b,KILLING attempt_<*>_0009_m_000000_1,1
+787e1c64,KILLING attempt_<*>_0009_m_000006_1,1
+82d540bf,KILLING attempt_<*>_0009_m_000006_2,1
+98959e1d,KILLING attempt_<*>_0009_r_000000_0,1
+413c0461,Before Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:0 <*> <*>,9
+da8c1f79,Launching attempt_<*>_0009_m_000009_1,1
+1b4b29dc,Launching attempt_<*>_0009_m_000009_2,1
+1f6ebd8f,KILLING attempt_<*>_0009_m_000009_1,1
+f93842b7,KILLING attempt_<*>_0009_m_000009_2,1
+88489ede,Launching attempt_<*>_0014_m_000000_0,2
+5d5078c1,Launching attempt_<*>_0014_m_000001_0,2
+1d003323,Launching attempt_<*>_0014_m_000002_0,2
+9fed95ed,Launching attempt_<*>_0014_m_000003_0,2
+10246d9e,Launching attempt_<*>_0014_m_000004_0,2
+ebf4436e,Launching attempt_<*>_0014_m_000005_0,2
+839a48d9,Launching attempt_<*>_0014_m_000006_0,2
+2d3c52f4,Launching attempt_<*>_0014_m_000007_0,2
+084c1a2e,Launching attempt_<*>_0014_m_000008_0,2
+4c484732,Launching attempt_<*>_0014_m_000009_0,2
+8b5bf99a,KILLING attempt_<*>_0014_m_000009_0,2
+007d2266,"completedMapPercent 0.1 totalResourceLimit:<memory:<*>, <*> <*> <*> <*> <*> netScheduledMapResource:<memory:<*>, vCores:11> netScheduledReduceResource:<memory:0, vCores:0>",11
+1c3bafa8,Launching attempt_<*>_0014_m_000000_1,2
+cb41f2c3,Launching attempt_<*>_0014_r_000000_0,2
+4a9e8542,Launching attempt_<*>_0014_m_000001_1,2
+647c9f72,Abandoning BP-<*>-<*>-<*>:blk_<*>_1713,1
+a2a3b085,KILLING attempt_<*>_0014_m_000006_0,2
+74238e05,KILLING attempt_<*>_0014_m_000007_0,2
+50988c5a,KILLING attempt_<*>_0014_m_000002_0,2
+0950743a,Launching attempt_<*>_0014_m_000008_1,1
+cdccf9a1,KILLING attempt_<*>_0014_m_000004_0,2
+dd889e85,KILLING attempt_<*>_0014_m_000003_0,2
+50de991b,KILLING attempt_<*>_0014_m_000005_0,2
+54fe9d02,KILLING attempt_<*>_0014_m_000008_0,2
+d1ba5006,KILLING attempt_<*>_0014_m_000008_1,1
+67963842,KILLING attempt_<*>_0014_m_000000_1,1
+379a5d6a,KILLING attempt_<*>_0014_m_000000_0,1
+7a708ae9,KILLING attempt_<*>_0014_m_000001_1,2
+f6426c40,KILLING attempt_<*>_0014_m_000001_0,2
+e77ca8bc,KILLING attempt_<*>_0014_r_000000_0,2
+26990679,Launching attempt_<*>_0020_m_000003_1,1
+ac32f5dd,Launching attempt_<*>_0020_r_000000_0,2
+664a1b0a,Launching attempt_<*>_0020_m_000002_1,1
+e6647d00,Launching attempt_<*>_0020_m_000001_1,1
+cc9ecfe7,Launching attempt_<*>_0020_m_000000_1,1
+fad72846,KILLING attempt_<*>_0020_m_000001_1,1
+3bbc4d42,KILLING attempt_<*>_0020_m_000002_1,1
+1e8d5b1c,KILLING attempt_<*>_0020_m_000000_1,1
+a4e1f0c4,KILLING attempt_<*>_0020_m_000003_1,1
+f5cd7de1,KILLING attempt_<*>_0020_r_000000_0,2
+30edf2b6,Launching attempt_<*>_0005_m_000006_0,5
+31403f1b,Launching attempt_<*>_0005_m_000007_0,5
+cd5a1364,Launching attempt_<*>_0005_m_000005_0,5
+ef5f9966,Launching attempt_<*>_0005_m_000002_0,5
+37656b1b,Launching attempt_<*>_0005_m_000004_0,5
+887b9aad,Launching attempt_<*>_0005_m_000000_0,5
+8296d558,Launching attempt_<*>_0005_m_000008_0,5
+19dd999d,Launching attempt_<*>_0005_m_000001_0,5
+88ff07b2,Launching attempt_<*>_0005_m_000003_0,5
+59e2c51b,Launching attempt_<*>_0005_m_000009_0,5
+71eaca87,KILLING attempt_<*>_0005_m_000000_0,5
+025e4c5a,KILLING attempt_<*>_0005_m_000005_0,5
+81447b34,KILLING attempt_<*>_0005_m_000003_0,5
+c16d015f,KILLING attempt_<*>_0005_m_000001_0,5
+dd57713c,KILLING attempt_<*>_0005_m_000004_0,5
+9f5d4c4e,KILLING attempt_<*>_0005_m_000002_0,5
+75ecf35c,Launching attempt_<*>_0005_r_000000_0,5
+1285999e,Launching attempt_<*>_0005_m_000008_1,4
+50e3518b,Launching attempt_<*>_0005_m_000006_1,2
+78462b47,Launching attempt_<*>_0005_m_000009_1,2
+bc83473d,KILLING attempt_<*>_0005_r_000000_0,5
+7bf80990,KILLING attempt_<*>_0005_m_000006_1,2
+becb97cc,KILLING attempt_<*>_0005_m_000008_1,4
+034a16ba,"completedMapPercent 0.6 totalResourceLimit:<memory:5120, vCores:-22> finalMapResourceLimit:<memory:2560, vCores:-11> finalReduceResourceLimit:<memory:2560, vCores:-11> netScheduledMapResource:<memory:7168, vCores:7> netScheduledReduceResource:<memory:0, vCores:0>",1
+06bd6ddf,Launching attempt_<*>_0005_r_000000_1,2
+1df40525,KILLING attempt_<*>_0005_m_000009_1,2
+9e38c0dc,KILLING attempt_<*>_0005_m_000009_0,5
+69e47d6e,KILLING attempt_<*>_0005_m_000007_0,5
+0733028e,Launching attempt_<*>_0005_m_000006_2,2
+606ffeb8,Launching attempt_<*>_0005_m_000008_2,2
+bd64eb4a,KILLING attempt_<*>_0005_m_000008_0,5
+c76ca99d,KILLING attempt_<*>_0005_m_000008_2,2
+5e737a7d,KILLING attempt_<*>_0005_m_000006_0,5
+22c2b837,KILLING attempt_<*>_0005_m_000006_2,2
+43fbefdd,Launching attempt_<*>_0005_m_000007_2,2
+83e73e24,Launching attempt_<*>_0005_m_000006_3,1
+facfd26c,Launching attempt_<*>_0005_m_000008_3,1
+cdfdf51a,Launching attempt_<*>_0005_m_000008_4,1
+0380d3f3,KILLING attempt_<*>_0005_m_000007_2,2
+81cb75ce,KILLING attempt_<*>_0005_m_000006_3,1
+f7da212c,KILLING attempt_<*>_0005_m_000008_3,1
+b2b10295,KILLING attempt_<*>_0005_m_000008_4,1
+ceddd7f0,KILLING attempt_<*>_0005_r_000000_1,2
+9c765839,Launching attempt_<*>_0005_r_000000_2,1
+3c9f4289,KILLING attempt_<*>_0005_r_000000_2,1
+65d9b05a,Abandoning BP-<*>-<*>-<*>:blk_<*>_2094,1
+e4f88ed1,Launching attempt_<*>_0003_m_000010_0,1
+01f5f594,"completedMapPercent 0.<*> <*> <*> <*> <*> <*> vCores:-2> netScheduledMapResource:<memory:<*>, <*> netScheduledReduceResource:<memory:0, vCores:0>",103
+aac43ee5,KILLING attempt_<*>_0003_m_000010_0,1
+89f83d0d,"completedMapPercent 0.<*> <*> <*> <*> vCores:-22> <*> <*> netScheduledMapResource:<memory:<*>, <*> netScheduledReduceResource:<memory:0, vCores:0>",37
+44767b0c,"completedMapPercent 0.<*> <*> <*> <*> <*> <*> vCores:-3> netScheduledMapResource:<memory:<*>, vCores:11> netScheduledReduceResource:<memory:0, vCores:0>",48
+f1bfe2a9,Launching attempt_<*>_0003_m_000012_0,1
+952e80c7,Launching attempt_<*>_0003_m_000011_0,1
+33cc5d5d,Launching attempt_<*>_0003_m_000009_1,2
+1fc180c4,Launching attempt_<*>_0003_m_000012_1,1
+2aa59c28,Launching attempt_<*>_0003_m_000011_1,1
+b285309f,KILLING attempt_<*>_0003_m_000011_1,1
+b140a1b8,KILLING attempt_<*>_0003_m_000011_0,1
+c06df842,KILLING attempt_<*>_0003_m_000009_1,2
+6f02acd6,KILLING attempt_<*>_0003_m_000012_0,1
+72446d6c,KILLING attempt_<*>_0003_m_000012_1,1
+07843eb8,Launching attempt_<*>_0003_m_000009_2,1
+ff4f4b27,Launching attempt_<*>_0003_m_000009_3,1
+8f5e32d0,KILLING attempt_<*>_0003_m_000009_2,1
+1fbf84e9,KILLING attempt_<*>_0003_m_000009_3,1
+09d98955,Launching attempt_<*>_0006_m_000001_0,1
+3fae21ed,Launching attempt_<*>_0006_m_000000_0,1
+6f169831,Launching attempt_<*>_0006_m_000002_0,1
+18c4b348,Launching attempt_<*>_0006_m_000003_0,1
+10685e37,Launching attempt_<*>_0006_m_000004_0,1
+bcb72b4a,Launching attempt_<*>_0006_m_000005_0,1
+6b988894,Launching attempt_<*>_0006_m_000006_0,1
+e6e430da,Launching attempt_<*>_0006_m_000007_0,1
+c490eaef,Launching attempt_<*>_0006_m_000008_0,1
+20fc1f71,Launching attempt_<*>_0006_m_000009_0,1
+1f6c8861,KILLING attempt_<*>_0006_m_000000_0,1
+9a294f1e,KILLING attempt_<*>_0006_m_000003_0,1
+2487c74f,KILLING attempt_<*>_0006_m_000007_0,1
+2d9a2842,KILLING attempt_<*>_0006_m_000002_0,1
+a5387d96,Launching attempt_<*>_0006_r_000000_0,1
+0bfaead9,KILLING attempt_<*>_0006_m_000006_0,1
+7b5bb452,getResources() for <*> ask=1 release= 0 newContainers=0 <*> <*> <*> <*>,16
+7046b7df,KILLING attempt_<*>_0006_m_000004_0,1
+10e280e7,KILLING attempt_<*>_0006_m_000005_0,1
+88f407ae,KILLING attempt_<*>_0006_m_000009_0,1
+28256532,KILLING attempt_<*>_0006_m_000008_0,1
+58a2b8e8,KILLING attempt_<*>_0006_m_000001_0,1
+109bb7c6,Abandoning BP-<*>-<*>-<*>:blk_<*>_2263,1
+766edb49,Launching attempt_<*>_0006_r_000000_1000,1
+f7bc473b,KILLING attempt_<*>_0006_r_000000_1000,1
+b1d22662,Abandoning BP-<*>-<*>-<*>:blk_<*>_1710,1
+c430c643,Launching attempt_<*>_0011_m_000004_0,2
+5b4220cd,Launching attempt_<*>_0011_m_000009_0,2
+bbfbd734,Launching attempt_<*>_0011_m_000007_0,2
+a335e1e8,Launching attempt_<*>_0011_m_000008_0,2
+7d206562,Launching attempt_<*>_0011_m_000002_0,2
+adc1ccf6,Launching attempt_<*>_0011_m_000000_0,2
+dd0b4392,Launching attempt_<*>_0011_m_000001_0,2
+d0ded976,Launching attempt_<*>_0011_m_000006_0,2
+bbf2ee7d,Launching attempt_<*>_0011_m_000003_0,2
+a11ec812,Launching attempt_<*>_0011_m_000005_0,2
+b17a51f9,KILLING attempt_<*>_0011_m_000009_0,2
+7391f222,Launching attempt_<*>_0011_m_000006_1,1
+922c32e2,KILLING attempt_<*>_0011_m_000005_0,2
+e985db2f,Launching attempt_<*>_0011_r_000000_0,2
+d3693150,KILLING attempt_<*>_0011_m_000003_0,2
+95398ec1,Launching attempt_<*>_0011_m_000007_1,2
+930f6453,KILLING attempt_<*>_0011_m_000000_0,2
+acdf2a32,KILLING attempt_<*>_0011_m_000001_0,2
+3afe5126,KILLING attempt_<*>_0011_m_000002_0,2
+f82e31a1,KILLING attempt_<*>_0011_m_000004_0,2
+1ff7c390,KILLING attempt_<*>_0011_m_000008_0,2
+26773447,KILLING attempt_<*>_0011_m_000007_0,2
+7d9e4a61,KILLING attempt_<*>_0011_m_000007_1,2
+10e92a1f,KILLING attempt_<*>_0011_m_000006_0,2
+4880540b,KILLING attempt_<*>_0011_m_000006_1,1
+dbc6daaa,KILLING attempt_<*>_0011_r_000000_0,2
+745236c5,Abandoning BP-<*>-<*>-<*>:blk_<*>_1719,1
+64bd454b,Launching attempt_<*>_0015_m_000000_0,1
+66f6ba75,Launching attempt_<*>_0015_m_000001_0,1
+f7ca4b8c,Launching attempt_<*>_0015_m_000002_0,1
+8ce3be15,Launching attempt_<*>_0015_m_000003_0,1
+752b1dd6,Launching attempt_<*>_0015_m_000004_0,1
+98c9d2ac,Launching attempt_<*>_0015_m_000005_0,1
+d533fc93,Launching attempt_<*>_0015_m_000006_0,1
+83218309,Launching attempt_<*>_0015_m_000007_0,1
+cb0d6d38,Launching attempt_<*>_0015_m_000008_0,1
+96ee42e2,Launching attempt_<*>_0015_m_000009_0,1
+f9acd7ca,KILLING attempt_<*>_0015_m_000000_0,1
+84b93853,Before Scheduling: <*> <*> <*> AssignedMaps:10 AssignedReds:0 <*> CompletedReds:0 ContAlloc:11 ContRel:1 <*> <*>,6
+99b85ba5,Launching attempt_<*>_0015_r_000000_0,1
+645e3603,Launching attempt_<*>_0015_m_000005_1,1
+bb57bb0d,KILLING attempt_<*>_0015_m_000003_0,1
+6aa04828,Launching attempt_<*>_0015_m_000001_1,1
+bdc58681,Launching attempt_<*>_0015_m_000002_1,1
+3fc64ade,KILLING attempt_<*>_0015_m_000004_0,1
+a04663ff,KILLING attempt_<*>_0015_m_000006_0,1
+acd71244,KILLING attempt_<*>_0015_m_000009_0,1
+48eeba10,KILLING attempt_<*>_0015_m_000007_0,1
+6c5bc033,KILLING attempt_<*>_0015_m_000008_0,1
+21bb9417,KILLING attempt_<*>_0015_m_000002_0,1
+3e8d343d,KILLING attempt_<*>_0015_m_000002_1,1
+3f6e889e,KILLING attempt_<*>_0015_m_000001_0,1
+97f057e0,KILLING attempt_<*>_0015_m_000001_1,1
+1e2d7cc7,KILLING attempt_<*>_0015_m_000005_1,1
+8ebc1c05,KILLING attempt_<*>_0015_m_000005_0,1
+93ab874f,KILLING attempt_<*>_0015_r_000000_0,1
+018a4ec1,After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:10 <*> <*> <*> <*> <*>,13
+7e447217,Abandoning BP-<*>-<*>-<*>:blk_<*>_1734,1
+063961bf,Abandoning BP-<*>-<*>-<*>:blk_<*>_1736,1
+a5f5c09d,Launching attempt_<*>_0010_m_000003_0,1
+37507ae3,Launching attempt_<*>_0010_m_000006_0,1
+bfa2b7f8,Launching attempt_<*>_0010_m_000004_0,1
+d5ce4ca2,Launching attempt_<*>_0010_m_000007_0,1
+f5cb6e4c,Launching attempt_<*>_0010_m_000000_0,1
+f29658c7,Launching attempt_<*>_0010_m_000002_0,1
+d0c88dcd,Launching attempt_<*>_0010_m_000001_0,1
+8db5c77f,Launching attempt_<*>_0010_m_000005_0,1
+98812e26,Launching attempt_<*>_0010_m_000008_0,1
+aef44818,Launching attempt_<*>_0010_m_000009_0,1
+8899b4a6,KILLING attempt_<*>_0010_m_000001_0,1
+661e4c38,KILLING attempt_<*>_0010_m_000000_0,1
+843e23e8,KILLING attempt_<*>_0010_m_000003_0,1
+cd0e8187,KILLING attempt_<*>_0010_m_000006_0,1
+52e49c68,KILLING attempt_<*>_0010_m_000009_0,1
+424f1395,Launching attempt_<*>_0010_r_000000_0,1
+fca052cc,KILLING attempt_<*>_0010_m_000008_0,1
+efd661ca,Launching attempt_<*>_0010_m_000005_1,1
+06f04fa4,KILLING attempt_<*>_0010_m_000005_0,1
+407a16c9,KILLING attempt_<*>_0010_m_000005_1,1
+e69f9f86,Launching attempt_<*>_0010_m_000006_1,1
+b272a45c,Launching attempt_<*>_0010_m_000003_1,1
+f64a6347,Launching attempt_<*>_0010_m_000000_1,1
+d0d0de85,Launching attempt_<*>_0010_m_000006_2,1
+de6a6e3b,KILLING attempt_<*>_0010_m_000004_0,1
+7f7bfd65,KILLING attempt_<*>_0010_m_000007_0,1
+006caf0d,KILLING attempt_<*>_0010_m_000002_0,1
+4a31d965,Launching attempt_<*>_0010_m_000003_2,1
+971f6351,KILLING attempt_<*>_0010_m_000006_2,1
+3be24822,KILLING attempt_<*>_0010_m_000006_1,1
+6dd7ef86,KILLING attempt_<*>_0010_m_000000_1,1
+eb8876bf,KILLING attempt_<*>_0010_m_000003_2,1
+bcb67279,KILLING attempt_<*>_0010_m_000003_1,1
+17ce560c,KILLING attempt_<*>_0010_r_000000_0,1
+6bb1571d,Launching attempt_<*>_0010_m_000009_1,1
+32730300,Launching attempt_<*>_0010_m_000008_1,1
+9b216716,Launching attempt_<*>_0010_m_000005_2,1
+6fc4fa88,Launching attempt_<*>_0010_m_000009_2,1
+d1f9b9d1,KILLING attempt_<*>_0010_m_000009_1,1
+606e2e97,KILLING attempt_<*>_0010_m_000009_2,1
+2f368c80,KILLING attempt_<*>_0010_m_000005_2,1
+da345de5,KILLING attempt_<*>_0010_m_000008_1,1
+31d01f11,"completedMapPercent 0.9 totalResourceLimit:<memory:<*>, <*> finalMapResourceLimit:<memory:1024, vCores:1> finalReduceResourceLimit:<memory:<*>, <*> netScheduledMapResource:<memory:1024, vCores:1> netScheduledReduceResource:<memory:0, vCores:0>",2
+f6e014c9,Launching attempt_<*>_0018_m_000007_1000,2
+063cb8ff,Launching attempt_<*>_0018_r_000000_1000,2
+7e47a348,Launching attempt_<*>_0018_m_000007_1001,1
+93fd620f,KILLING attempt_<*>_0018_m_000007_1000,2
+235453be,KILLING attempt_<*>_0018_m_000007_1001,1
+28969ede,KILLING attempt_<*>_0018_r_000000_1000,2
+8b6ad6b4,Exception in getting events,2
+ddc54966,Launching attempt_<*>_0018_m_000000_0,2
+c9f001e2,Launching attempt_<*>_0018_m_000001_0,2
+8acdd987,Launching attempt_<*>_0018_m_000002_0,1
+a6b908c9,Launching attempt_<*>_0018_m_000003_0,1
+4a9f6b45,Launching attempt_<*>_0018_m_000004_0,1
+994dc93c,Launching attempt_<*>_0018_m_000005_0,1
+d8e1eddb,Launching attempt_<*>_0018_m_000006_0,1
+c4442f61,Launching attempt_<*>_0018_m_000008_0,1
+5a78fda1,Launching attempt_<*>_0018_m_000007_0,1
+635cf9eb,Launching attempt_<*>_0018_m_000009_0,1
+a01ffc97,KILLING attempt_<*>_0018_m_000000_0,1
+11f2a971,Before Scheduling: <*> <*> <*> AssignedMaps:9 AssignedReds:0 <*> CompletedReds:0 ContAlloc:12 ContRel:2 HostLocal:2 RackLocal:8,3
+a5b3c69d,KILLING attempt_<*>_0018_m_000001_0,1
+0dc769b2,After Scheduling: PendingReds:0 <*> ScheduledReds:0 <*> AssignedReds:1 CompletedMaps:2 CompletedReds:0 <*> ContRel:2 <*> <*>,12
+15aff5d1,Launching attempt_<*>_0018_r_000000_0,1
+74cc9835,Launching attempt_<*>_0018_m_000006_1,1
+83d56e09,Launching attempt_<*>_0018_m_000004_1,1
+beb74761,Launching attempt_<*>_0018_m_000003_1,1
+682ab36f,Launching attempt_<*>_0018_m_000007_1,1
+af1dd3b6,Launching attempt_<*>_0018_m_000002_1,1
+b4c2c8f7,Launching attempt_<*>_0018_m_000008_1,1
+445994b4,Launching attempt_<*>_0018_m_000005_1,1
+13b6f809,KILLING attempt_<*>_0018_m_000006_1,1
+705f0db4,KILLING attempt_<*>_0018_m_000006_0,1
+93395054,KILLING attempt_<*>_0018_m_000003_1,1
+d284a3b3,KILLING attempt_<*>_0018_m_000003_0,1
+5e8bfe33,KILLING attempt_<*>_0018_m_000009_0,1
+13133b00,KILLING attempt_<*>_0018_m_000004_1,1
+7c16c706,KILLING attempt_<*>_0018_m_000004_0,1
+9f74813f,KILLING attempt_<*>_0018_m_000008_1,1
+692eebd1,KILLING attempt_<*>_0018_m_000008_0,1
+2cc38721,KILLING attempt_<*>_0018_m_000002_1,1
+3ddb02df,KILLING attempt_<*>_0018_m_000002_0,1
+c529d827,KILLING attempt_<*>_0018_m_000005_1,1
+ac32bb15,KILLING attempt_<*>_0018_m_000005_0,1
+10251e67,Abandoning BP-<*>-<*>-<*>:blk_<*>_1858,1
+1dfb06f9,"Failed to connect to /<*>:<*> for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information",5
+5f8ab6b9,Successfully connected to /<*>:<*> for <*>,6
+f8c01b03,After Scheduling: PendingReds:0 <*> <*> AssignedMaps:10 <*> CompletedMaps:1 CompletedReds:0 <*> ContRel:1 HostLocal:8 <*>,4
+644201e5,Launching attempt_<*>_0005_m_000007_1,2
+dffce74b,Launching attempt_<*>_0005_m_000005_1,1
+b1fe1cf4,KILLING attempt_<*>_0005_m_000005_1,1
+773becee,KILLING attempt_<*>_0005_m_000007_1,2
+a58afbb2,Launching attempt_<*>_0002_m_000010_0,1
+53595005,KILLING attempt_<*>_0002_m_000010_0,1
+3c6b5ea7,"completedMapPercent 0.<*> totalResourceLimit:<memory:8192, vCores:-27> finalMapResourceLimit:<memory:6932, vCores:-23> finalReduceResourceLimit:<memory:1260, vCores:-4> netScheduledMapResource:<memory:<*>, vCores:12> netScheduledReduceResource:<memory:0, vCores:0>",1
+5a6edb30,Launching attempt_<*>_0002_m_000012_0,1
+f71d9d02,Launching attempt_<*>_0002_m_000011_0,1
+e947e677,Launching attempt_<*>_0002_m_000007_1,2
+f13d238d,Launching attempt_<*>_0002_m_000006_1,3
+e6b0bdd3,Launching attempt_<*>_0002_m_000003_1,2
+6f09e2bf,Launching attempt_<*>_0002_m_000006_2,1
+b6b5b544,KILLING attempt_<*>_0002_m_000011_0,1
+b72fcb34,Launching attempt_<*>_0002_m_000012_1,1
+4eb55e91,KILLING attempt_<*>_0002_m_000007_1,2
+f2ec77a0,KILLING attempt_<*>_0002_m_000003_1,2
+05391afa,KILLING attempt_<*>_0002_m_000012_1,1
+140fc5d9,KILLING attempt_<*>_0002_m_000012_0,1
+7b500a18,KILLING attempt_<*>_0002_m_000006_1,3
+91c4e23a,KILLING attempt_<*>_0002_m_000006_2,1
+f409ae1f,Launching attempt_<*>_0002_r_000000_1000,2
+163c8b5a,Launching attempt_<*>_0002_m_000006_1000,1
+72e16964,Launching attempt_<*>_0002_m_000006_1001,1
+b7f965fb,KILLING attempt_<*>_0002_m_000006_1000,1
+18627fb2,KILLING attempt_<*>_0002_m_000006_1001,1
+9e4ac92d,KILLING attempt_<*>_0002_r_000000_1000,2
+99435d3b,Abandoning BP-<*>-<*>-<*>:blk_<*>_2102,1
+eec06717,Communication exception: java.net.ConnectException: Call From MSRA-SA-39/<*> to minint-fnanli5.fareast.corp.microsoft.com:<*> failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: http://wiki.apache.org/hadoop/ConnectionRefused,1
+d68c3953,Launching attempt_<*>_0002_m_000002_1,2
+d471da9b,KILLING attempt_<*>_0002_m_000002_1,2
+09cfc0e5,Launching attempt_<*>_0005_m_000010_0,1
+fca86c30,Abandoning BP-<*>-<*>-<*>:blk_<*>_2130,1
+5304c78b,Launching attempt_<*>_0005_m_000011_0,1
+b6e02ee2,Launching attempt_<*>_0005_m_000012_0,1
+74c74394,Launching attempt_<*>_0005_m_000011_1,1
+940903ac,KILLING attempt_<*>_0005_m_000010_0,1
+6bd644ac,Launching attempt_<*>_0005_m_000012_1,1
+44a80c34,KILLING attempt_<*>_0005_m_000011_0,1
+5d8fb801,KILLING attempt_<*>_0005_m_000012_0,1
+934a2e36,KILLING attempt_<*>_0005_m_000011_1,1
+fe77bf97,Launching attempt_<*>_0005_m_000011_2,1
+e75af0ba,Launching attempt_<*>_0005_m_000011_3,1
+9e3be6fd,Launching attempt_<*>_0005_m_000012_2,1
+16410d54,KILLING attempt_<*>_0005_m_000012_1,1
+8b747ba0,KILLING attempt_<*>_0005_m_000012_2,1
+f23f8588,KILLING attempt_<*>_0005_m_000011_3,1
+d83455a2,KILLING attempt_<*>_0005_m_000011_2,1
+850bbb24,"Failed to connect to /<*>:<*> for block, add to deadNodes and continue. java.net.ConnectException: Connection refused: no further information",1
+44d4086c,Abandoning BP-<*>-<*>-<*>:blk_<*>_2272,1
+65b53cc7,Launching attempt_<*>_0007_r_000000_1000,1
+eff81425,KILLING attempt_<*>_0007_r_000000_1000,1
+e9b3b6a7,Launching attempt_<*>_0007_m_000000_0,1
+8edea1b4,Launching attempt_<*>_0007_m_000002_0,1
+3d0431bc,Launching attempt_<*>_0007_m_000003_0,1
+61adb19d,Launching attempt_<*>_0007_m_000007_0,1
+859466d9,Launching attempt_<*>_0007_m_000006_0,1
+b2f94bcd,Launching attempt_<*>_0007_m_000008_0,1
+4166f51f,Launching attempt_<*>_0007_m_000001_0,1
+ca5fc6a5,Launching attempt_<*>_0007_m_000005_0,1
+93b0c0b5,Launching attempt_<*>_0007_m_000004_0,1
+580f11b8,Launching attempt_<*>_0007_m_000009_0,1
+11f6b6a1,KILLING attempt_<*>_0007_m_000009_0,1
+a577cac2,KILLING attempt_<*>_0007_m_000003_0,1
+56f73f49,KILLING attempt_<*>_0007_m_000004_0,1
+d83a1921,KILLING attempt_<*>_0007_m_000002_0,1
+a727ac51,KILLING attempt_<*>_0007_m_000001_0,1
+ebeb177f,KILLING attempt_<*>_0007_m_000000_0,1
+f5de21d4,KILLING attempt_<*>_0007_m_000007_0,1
+1465dea3,KILLING attempt_<*>_0007_m_000006_0,1
+53479613,KILLING attempt_<*>_0007_m_000008_0,1
+65f93a78,Launching attempt_<*>_0007_r_000000_0,1
+30732906,KILLING attempt_<*>_0007_m_000005_0,1
+2092b3aa,KILLING attempt_<*>_0007_r_000000_0,1
+9bfedc11,Launching attempt_<*>_0004_m_000001_1,1
+c7ed714e,KILLING attempt_<*>_0004_m_000001_1,1
+a1a0d5a4,Launching attempt_<*>_0020_m_000009_1,1
+b24c1bc9,Abandoning BP-<*>-<*>-<*>:blk_<*>_3281,1
+fe4cc504,KILLING attempt_<*>_0020_m_000009_1,1
+51db8704,Launching attempt_<*>_0002_m_000005_1,1
+f0fd9814,Launching attempt_<*>_0002_m_000008_1,1
+eabef6cb,Launching attempt_<*>_0002_m_000004_1,1
+acbf7546,Launching attempt_<*>_0002_m_000009_1,1
+8acad28d,KILLING attempt_<*>_0002_m_000005_1,1
+7e5224a2,KILLING attempt_<*>_0002_m_000008_1,1
+1f365a99,KILLING attempt_<*>_0002_m_000004_1,1
+f5d12939,Task: attempt_<*>_0002_m_000007_0 - exited : org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_<*>_0002_m_000007_0/file.out,1
+e7f4bc1a,Diagnostics report from attempt_<*>_0002_m_000007_0: Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_<*>_0002_m_000007_0/file.out,2
+9979fc95,KILLING attempt_<*>_0002_m_000009_1,1
+14b82a46,Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@<*>,1
+43daad79,Exception running child : org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_<*>_0002_m_000007_0/file.out,1
+6f9e1e4a,Launching attempt_<*>_0023_m_000000_0,1
+e337e5f0,Launching attempt_<*>_0023_m_000001_0,1
+5b3109e6,Launching attempt_<*>_0023_m_000002_0,1
+06aa3e82,Launching attempt_<*>_0023_m_000003_0,1
+b267bb1b,Error closing writer for JobID: <*>,1
+2786c026,Found jobId <*> to have not been closed. Will close,2
+eddacc51,Service JobHistoryEventHandler failed in state STOPPED; cause: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.nio.channels.ClosedChannelException,1
+f3438fe2,When stopping the service JobHistoryEventHandler : org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.nio.channels.ClosedChannelException,1
+a65d19f3,KILLING attempt_<*>_0023_m_000000_0,1
+2e3b4e2d,KILLING attempt_<*>_0023_m_000003_0,1
+f5ca58e7,KILLING attempt_<*>_0023_m_000002_0,1
+9e976df3,KILLING attempt_<*>_0023_m_000001_0,1
+0103f0da,Final Stats: PendingReds:1 ScheduledMaps:6 ScheduledReds:0 AssignedMaps:4 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:4 ContRel:0 HostLocal:3 RackLocal:1,1
+6418282f,Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state STOPPED; cause: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.nio.channels.ClosedChannelException,1
+cc733719,Launching attempt_<*>_0023_m_000002_1000,1
+20392794,Launching attempt_<*>_0023_m_000001_1000,1
+b6c55a48,Launching attempt_<*>_0023_m_000000_1000,1
+3a579fa3,Launching attempt_<*>_0023_m_000003_1000,1
+ab74f001,Launching attempt_<*>_0023_m_000004_1000,1
+4232b3d9,Launching attempt_<*>_0023_m_000005_1000,1
+9f44abef,Launching attempt_<*>_0023_m_000006_1000,1
+e63a85af,Launching attempt_<*>_0023_m_000007_1000,1
+68921078,Launching attempt_<*>_0023_m_000008_1000,1
+b88cc3a2,Launching attempt_<*>_0023_m_000009_1000,1
+b8cc8ed8,KILLING attempt_<*>_0023_m_000009_1000,1
+69110303,"getResources() for application_<*>_0023: <*> release= 0 <*> <*> resourcelimit=<memory:0, vCores:-20> knownNMs=3",5
+9406db95,Launching attempt_<*>_0023_m_000005_1001,1
+2ff561be,KILLING attempt_<*>_0023_m_000001_1000,1
+67d82192,KILLING attempt_<*>_0023_m_000000_1000,1
+b88b55a3,Launching attempt_<*>_0023_r_000000_1000,1
+e9369480,Launching attempt_<*>_0023_m_000006_1001,1
+ad9f3aaf,KILLING attempt_<*>_0023_m_000002_1000,1
+62291628,Launching attempt_<*>_0023_m_000004_1001,1
+699225fa,KILLING attempt_<*>_0023_m_000003_1000,1
+b6773c1d,Launching attempt_<*>_0023_m_000007_1001,1
+6557d9c6,Launching attempt_<*>_0023_m_000008_1001,1
+a31eb58f,KILLING attempt_<*>_0023_m_000005_1001,1
+d5e43db1,KILLING attempt_<*>_0023_m_000005_1000,1
+6affceda,KILLING attempt_<*>_0023_m_000006_1001,1
+278462f8,KILLING attempt_<*>_0023_m_000006_1000,1
+24d4f326,KILLING attempt_<*>_0023_m_000004_1001,1
+61428534,KILLING attempt_<*>_0023_m_000004_1000,1
+9cead032,KILLING attempt_<*>_0023_m_000007_1001,1
+40e08595,KILLING attempt_<*>_0023_m_000007_1000,1
+dcb6cd90,KILLING attempt_<*>_0023_m_000008_1001,1
+6886dddf,KILLING attempt_<*>_0023_m_000008_1000,1
+78b2a8c5,KILLING attempt_<*>_0023_r_000000_1000,1
+5233b7e3,Communication exception: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to <*>:<*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,10
+bdca8fec,Process Thread Dump: Communication exception,5
+ecd92ac1,"Last retry, killing <*>",5
+7a4a82f4,Abandoning BP-<*>-<*>-<*>:blk_<*>_2913,1
+09f8bbe6,"Could not obtain BP-<*>-<*>-<*>:blk_<*>_2201 from any node: java.io.IOException: No live nodes contain block BP-<*>-<*>-<*>:blk_<*>_2201 after checking nodes = [<*>:<*>, <*>:<*>], ignoredNodes = null No live nodes contain current block Block locations: <*>:<*> <*>:<*> Dead nodes: <*>:<*> <*>:<*> <*>:<*>. Will get new block locations from namenode and retry...",1
+fcb58aeb,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>:4821,1
+03690f13,Launching attempt_<*>_0012_m_000003_0,1
+36547e6b,Launching attempt_<*>_0012_m_000007_0,1
+0acbb9c9,Launching attempt_<*>_0012_m_000004_0,1
+e74e51db,Launching attempt_<*>_0012_m_000009_0,1
+73059a27,Launching attempt_<*>_0012_m_000001_0,1
+9c92758d,Launching attempt_<*>_0012_m_000008_0,1
+d998f71d,Launching attempt_<*>_0012_m_000000_0,1
+df385da8,Launching attempt_<*>_0012_m_000005_0,1
+11643cb0,Launching attempt_<*>_0012_m_000002_0,1
+e274ac02,Launching attempt_<*>_0012_m_000006_0,1
+8c061dfd,KILLING attempt_<*>_0012_m_000009_0,1
+2214cfd5,Launching attempt_<*>_0012_r_000000_0,1
+ef889d7e,KILLING attempt_<*>_0012_m_000000_0,1
+3b689c40,KILLING attempt_<*>_0012_m_000003_0,1
+4695534e,KILLING attempt_<*>_0012_m_000001_0,1
+e4a375cd,Launching attempt_<*>_0012_m_000002_1,1
+00c11b0b,KILLING attempt_<*>_0012_m_000006_0,1
+25409aa0,KILLING attempt_<*>_0012_m_000008_0,1
+78fcdf76,KILLING attempt_<*>_0012_m_000007_0,1
+d873dede,KILLING attempt_<*>_0012_m_000005_0,1
+98982148,KILLING attempt_<*>_0012_m_000004_0,1
+d0dae040,KILLING attempt_<*>_0012_m_000002_0,1
+60b21421,KILLING attempt_<*>_0012_m_000002_1,1
+2a3a6e52,KILLING attempt_<*>_0012_r_000000_0,1
+cc79ae7a,Launching attempt_<*>_0024_m_000000_0,1
+c88efe7b,KILLING attempt_<*>_0024_m_000000_0,1
+62412d2a,"completedMapPercent 0.1 totalResourceLimit:<memory:1024, vCores:-26> finalMapResourceLimit:<memory:922, vCores:-24> finalReduceResourceLimit:<memory:102, vCores:-2> <*> <*> netScheduledReduceResource:<memory:0, vCores:0>",115
+c8c3b3b9,Launching attempt_<*>_0024_m_000001_0,1
+6a73ff97,KILLING attempt_<*>_0024_m_000001_0,1
+b3eec993,"completedMapPercent 0.2 <*> <*> <*> <*> <*> <*> netScheduledMapResource:<memory:8192, vCores:8> netScheduledReduceResource:<memory:0, vCores:0>",122
+77deb24d,Launching attempt_<*>_0024_m_000002_0,1
+23f0742a,Launching attempt_<*>_0024_m_000004_0,1
+b8206339,Launching attempt_<*>_0024_m_000003_0,1
+89915adf,Launching attempt_<*>_0024_m_000008_0,1
+ba2be540,Launching attempt_<*>_0024_m_000005_0,1
+9cbcb9ae,Launching attempt_<*>_0024_m_000009_0,1
+f1fce515,Launching attempt_<*>_0024_m_000006_0,1
+2a04e306,Launching attempt_<*>_0024_m_000007_0,1
+0e0dccea,getResources() for application_<*>_0024: <*> release= 0 <*> finishedContainers=0 <*> <*> knownNMs=3,6
+fae83e8d,Launching attempt_<*>_0024_r_000000_0,1
+93a3fd27,KILLING attempt_<*>_0024_m_000002_0,1
+ba740bd6,Launching attempt_<*>_0024_m_000006_1,1
+bcea66ad,KILLING attempt_<*>_0024_m_000009_0,1
+77cafe85,KILLING attempt_<*>_0024_m_000008_0,1
+21b37f20,Launching attempt_<*>_0024_m_000008_1,1
+d88d1681,KILLING attempt_<*>_0024_m_000008_1,1
+8bc3d950,KILLING attempt_<*>_0024_m_000004_0,1
+87394bc4,KILLING attempt_<*>_0024_m_000007_0,1
+13651ce8,KILLING attempt_<*>_0024_m_000006_0,1
+0bb80331,KILLING attempt_<*>_0024_m_000006_1,1
+b4d40197,KILLING attempt_<*>_0024_m_000005_0,1
+3c80590b,KILLING attempt_<*>_0024_m_000003_0,1
+f67b3b86,KILLING attempt_<*>_0024_r_000000_0,1
+c7648d69,Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in <*>,2
+75f00688,Launching attempt_<*>_0003_m_000001_1,1
+fd1d492f,Launching attempt_<*>_0003_m_000002_1,1
+2e7db2fa,Task: <*> - failed due to FSError: java.io.IOException: There is not enough space on the disk,2
+c9eab166,Diagnostics report from <*> <*> java.io.IOException: There is not enough space on the disk,8
+4d8ff06c,Task: <*> - exited : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in <*>,2
+28061564,Diagnostics report from <*> Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in <*>,4
+3e77ada7,Before Scheduling: <*> <*> ScheduledReds:0 <*> AssignedReds:1 <*> CompletedReds:0 <*> ContRel:0 HostLocal:9 RackLocal:4,15
+0e9d7c3c,"completedMapPercent 0.7 totalResourceLimit:<memory:9216, vCores:-18> finalMapResourceLimit:<memory:4608, vCores:-9> finalReduceResourceLimit:<memory:4608, vCores:-9> netScheduledMapResource:<memory:7168, vCores:7> netScheduledReduceResource:<memory:1024, vCores:1>",1
+c10f5700,After Scheduling: PendingReds:0 <*> <*> <*> <*> <*> CompletedReds:0 <*> ContRel:0 HostLocal:9 RackLocal:4,6
+13ed2f94,"Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: <*>:<*> }, ] to fast fail map",5
+a275647a,Assigned from earlierFailedMaps,5
+03d9ef97,Launching attempt_<*>_0003_m_000000_2,1
+f4f9d9e8,Launching attempt_<*>_0003_r_000000_1,1
+874818b7,KILLING attempt_<*>_0003_m_000001_1,1
+d7b20de8,KILLING attempt_<*>_0003_m_000000_2,1
+cd0059fb,Launching attempt_<*>_0003_m_000000_3,1
+7537120a,KILLING attempt_<*>_0003_m_000002_1,1
+e9d6d130,KILLING attempt_<*>_0003_m_000000_3,1
+5b33527e,KILLING attempt_<*>_0003_r_000000_1,1
+db239425,Launching attempt_<*>_0019_m_000008_1000,1
+f90ccbb0,Launching attempt_<*>_0019_m_000001_1000,1
+4688038f,Launching attempt_<*>_0019_m_000002_1000,1
+00c219d1,Launching attempt_<*>_0019_m_000003_1000,1
+20908643,Launching attempt_<*>_0019_m_000000_1000,1
+6122d9b7,Launching attempt_<*>_0019_m_000006_1000,1
+13babc10,Launching attempt_<*>_0019_m_000005_1000,1
+dac3003d,Launching attempt_<*>_0019_m_000009_1000,1
+029ae376,Launching attempt_<*>_0019_m_000007_1000,1
+7d4ecae6,Launching attempt_<*>_0019_m_000004_1000,1
+7434e43e,KILLING attempt_<*>_0019_m_000009_1000,1
+fd5f2736,Launching attempt_<*>_0019_r_000000_1000,1
+f2cae494,Launching attempt_<*>_0019_m_000002_1001,1
+4a5c203e,Abandoning BP-<*>-<*>-<*>:blk_<*>_3286,1
+75f1b079,Launching attempt_<*>_0019_m_000004_1001,1
+a9717ae9,Launching attempt_<*>_0019_m_000000_1001,1
+a07c9a00,KILLING attempt_<*>_0019_m_000006_1000,1
+648870f4,KILLING attempt_<*>_0019_m_000008_1000,1
+d56e3fc9,KILLING attempt_<*>_0019_m_000003_1000,1
+fb0f0969,KILLING attempt_<*>_0019_m_000005_1000,1
+c461e103,KILLING attempt_<*>_0019_m_000001_1000,1
+8edbd152,KILLING attempt_<*>_0019_m_000004_1000,1
+4dcbf03b,KILLING attempt_<*>_0019_m_000004_1001,1
+d9e5e749,KILLING attempt_<*>_0019_m_000007_1000,1
+ff360462,KILLING attempt_<*>_0019_m_000000_1000,1
+58c4f96b,KILLING attempt_<*>_0019_m_000000_1001,1
+828304cf,KILLING attempt_<*>_0019_m_000002_1000,1
+1f3b470b,KILLING attempt_<*>_0019_m_000002_1001,1
+779e73c2,KILLING attempt_<*>_0019_r_000000_1000,1
+ead85c27,Service JobHistoryEventHandler failed in state STOPPED; cause: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,1
+c8c6eb61,When stopping the service JobHistoryEventHandler : org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,1
+261985dd,Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state STOPPED; cause: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost,1
+da66ba6a,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>:4412,1
+c954e8a9,Launching attempt_<*>_0003_r_000000_1000,1
+161f788c,Launching attempt_<*>_0003_m_000009_1000,1
+3e641da8,Launching attempt_<*>_0003_m_000009_1001,1
+e20517d6,KILLING attempt_<*>_0003_m_000009_1000,1
+993a022a,KILLING attempt_<*>_0003_m_000009_1001,1
+41cbe7db,KILLING attempt_<*>_0003_r_000000_1000,1
+c9c0be26,Abandoning BP-<*>-<*>-<*>:blk_<*>_2902,1
+efb92b4b,Task attempt_<*>_0004_m_000004_0 failed : org.apache.hadoop.fs.FSError: java.io.IOException: There is not enough space on the disk,1
+4a51e849,Task: attempt_<*>_0004_m_000004_0 - exited : java.io.IOException: There is not enough space on the disk,2
+5bb418f9,Task: attempt_<*>_0004_m_000004_0 - exited : java.io.IOException: Spill failed,1
+693fe9ba,Diagnostics report from attempt_<*>_0004_m_000004_0: Error: java.io.IOException: Spill failed,2
+30fce9eb,Launching attempt_<*>_0004_m_000004_1,1
+124595ef,KILLING attempt_<*>_0004_m_000004_1,1
+582b94c6,Before Scheduling: PendingReds:1 ScheduledMaps:1 ScheduledReds:0 <*> AssignedReds:0 <*> CompletedReds:0 <*> ContRel:2 HostLocal:6 RackLocal:4,2
+7f827179,Launching attempt_<*>_0004_m_000004_2,1
+cd1d6121,getResources() for application_<*>_0004: <*> release= 0 newContainers=1 <*> <*> <*> knownNMs=3,2
+cf521679,Launching attempt_<*>_0004_m_000009_1,1
+6ef1f69d,KILLING attempt_<*>_0004_m_000004_2,1
+7f2cbb82,KILLING attempt_<*>_0004_m_000009_1,1
+e14db0d0,"getResources() for <*> <*> release= 0 <*> <*> resourcelimit=<memory:0, vCores:-27> knownNMs=4",53
+de57b8b0,Launching attempt_<*>_0017_m_000000_1,1
+0c867202,KILLING attempt_<*>_0017_m_000000_1,1
+1c23b566,KILLING attempt_<*>_0017_r_000000_0,1
+15540159,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>:4233,1
+38f0cf45,Shuffle failed : local error on this node: 04DN8IQ/<*>,2
+17e09dd8,"completedMapPercent 0.1 totalResourceLimit:<memory:6144, vCores:-21> finalMapResourceLimit:<memory:5530, vCores:-19> finalReduceResourceLimit:<memory:614, vCores:-2> <*> <*> netScheduledReduceResource:<memory:0, vCores:0>",2
+a857114b,Launching attempt_<*>_0014_m_000009_1,1
+00850f83,KILLING attempt_<*>_0014_m_000009_1,1
+88328ae6,Launching attempt_<*>_0014_r_000000_1,1
+65bfe0dc,Launching attempt_<*>_0014_m_000000_1000,1
+48667e70,Launching attempt_<*>_0014_r_000000_1000,1
+b5f8ee15,Launching attempt_<*>_0014_m_000000_1001,1
+76e62665,KILLING attempt_<*>_0014_m_000000_1000,1
+a1a6edd9,KILLING attempt_<*>_0014_m_000000_1001,1
+9d4e1c9f,KILLING attempt_<*>_0014_r_000000_1000,1
+1f450825,Launching attempt_<*>_0011_m_000005_1,1
+86e45ab8,Launching attempt_<*>_0011_m_000008_1,1
+9442ccc3,Launching attempt_<*>_0011_m_000003_1,1
+da80b9ab,KILLING attempt_<*>_0011_m_000005_1,1
+f0ce42df,Launching attempt_<*>_0011_m_000004_1,1
+3696dc79,KILLING attempt_<*>_0011_m_000008_1,1
+8d62ff81,KILLING attempt_<*>_0011_m_000004_1,1
+9b81b34f,KILLING attempt_<*>_0011_m_000003_1,1
+b5d278ec,Launching attempt_<*>_0018_m_000000_1000,1
+070afa3f,Launching attempt_<*>_0018_m_000001_1000,1
+96e0fe4f,Launching attempt_<*>_0018_m_000002_1000,1
+e0db2b1d,Abandoning BP-<*>-<*>-<*>:blk_<*>_3283,1
+4ae79826,Launching attempt_<*>_0018_m_000003_1000,1
+60daed0c,Launching attempt_<*>_0018_m_000004_1000,1
+1e38f491,Launching attempt_<*>_0018_m_000005_1000,1
+25af0ff3,Launching attempt_<*>_0018_m_000006_1000,1
+bbea569f,Launching attempt_<*>_0018_m_000008_1000,1
+9eb6aa9a,Launching attempt_<*>_0018_m_000009_1000,1
+bf4a38f9,KILLING attempt_<*>_0018_m_000004_1000,1
+f11fdf8a,After Scheduling: PendingReds:0 <*> ScheduledReds:1 <*> AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:11 ContRel:1 <*> <*>,3
+66e61bb0,Launching attempt_<*>_0018_m_000000_1001,1
+44d394ef,KILLING attempt_<*>_0018_m_000009_1000,1
+c8112acc,Launching attempt_<*>_0018_m_000005_1001,1
+1ccbaabe,Launching attempt_<*>_0018_m_000001_1001,1
+22f2feac,KILLING attempt_<*>_0018_m_000006_1000,1
+00ad4cb9,Launching attempt_<*>_0018_m_000003_1001,1
+49693268,Launching attempt_<*>_0018_m_000002_1001,1
+568c7392,KILLING attempt_<*>_0018_m_000008_1000,1
+d556f24f,KILLING attempt_<*>_0018_m_000001_1001,1
+ceec45a6,KILLING attempt_<*>_0018_m_000001_1000,1
+038f2e91,KILLING attempt_<*>_0018_m_000002_1000,1
+daef83e4,KILLING attempt_<*>_0018_m_000002_1001,1
+8ca1eb0a,KILLING attempt_<*>_0018_m_000000_1000,1
+b5b4d598,KILLING attempt_<*>_0018_m_000000_1001,1
+f5c284e4,KILLING attempt_<*>_0018_m_000003_1000,1
+ea4dba99,KILLING attempt_<*>_0018_m_000003_1001,1
+72a103bc,KILLING attempt_<*>_0018_m_000005_1000,1
+797c9d13,KILLING attempt_<*>_0018_m_000005_1001,1
+c35dadd3,KILLING attempt_<*>_0013_m_000009_0,1
+3607605d,Launching attempt_<*>_0013_r_000000_0,1
+102c2a85,Launching attempt_<*>_0013_m_000002_1,1
+976ced0c,Launching attempt_<*>_0013_m_000001_1,1
+9b7af01c,KILLING attempt_<*>_0013_m_000003_0,1
+b406c64f,KILLING attempt_<*>_0013_m_000006_0,1
+37eef601,Launching attempt_<*>_0013_m_000000_1,1
+fb17612d,KILLING attempt_<*>_0013_m_000005_0,1
+0e9f375b,KILLING attempt_<*>_0013_m_000008_0,1
+834c6432,KILLING attempt_<*>_0013_m_000007_0,1
+3932152a,KILLING attempt_<*>_0013_m_000004_0,1
+3c932da0,KILLING attempt_<*>_0013_m_000002_1,1
+fb7a673d,KILLING attempt_<*>_0013_m_000002_0,1
+edaa2021,KILLING attempt_<*>_0013_m_000000_0,1
+77eb3dcd,KILLING attempt_<*>_0013_m_000000_1,1
+01079e5d,KILLING attempt_<*>_0013_m_000001_1,1
+c3f7f3e9,KILLING attempt_<*>_0013_m_000001_0,1
+64461189,KILLING attempt_<*>_0013_r_000000_0,1
+039c163e,"getResources() for <*> <*> release= <*> newContainers=0 <*> resourcelimit=<memory:4096, vCores:-23> knownNMs=4",2
+90955b4c,getResources() for application_<*>_0016: ask=4 release= 0 <*> <*> <*> <*> knownNMs=4,6
+fa71f599,Launching attempt_<*>_0016_m_000006_1,1
+3541622a,Launching attempt_<*>_0016_m_000008_1,1
+b698adf9,Launching attempt_<*>_0016_m_000005_1,1
+d4c87916,Launching attempt_<*>_0016_m_000007_1,1
+7c59b995,KILLING attempt_<*>_0016_m_000006_1,1
+4a44569a,KILLING attempt_<*>_0016_m_000007_1,1
+f7df2853,KILLING attempt_<*>_0016_m_000008_1,1
+f25fa402,KILLING attempt_<*>_0016_m_000005_1,1
+569e1a33,Abandoning BP-<*>-<*>-<*>:blk_<*>_2738,1
+49d2da37,Launching attempt_<*>_0022_m_000003_0,1
+419e4b9e,Launching attempt_<*>_0022_m_000001_0,1
+9d4dd8ed,Launching attempt_<*>_0022_m_000002_0,1
+60b517b0,Launching attempt_<*>_0022_m_000000_0,1
+48bc94e6,Launching attempt_<*>_0022_m_000004_0,1
+31b7b3c4,Launching attempt_<*>_0022_m_000005_0,1
+3a5c768e,Launching attempt_<*>_0022_m_000006_0,1
+4bd7de0a,Launching attempt_<*>_0022_m_000007_0,1
+89636c3e,Launching attempt_<*>_0022_m_000008_0,1
+1487f443,Launching attempt_<*>_0022_m_000009_0,1
+5e94f1df,KILLING attempt_<*>_0022_m_000003_0,1
+83c8ec74,KILLING attempt_<*>_0022_m_000002_0,1
+b1cda226,KILLING attempt_<*>_0022_m_000000_0,1
+3603b77c,KILLING attempt_<*>_0022_m_000001_0,1
+873081cf,Launching attempt_<*>_0022_r_000000_0,1
+b7efb8c7,Launching attempt_<*>_0022_m_000007_1,1
+a8b39b8a,Launching attempt_<*>_0022_m_000005_1,1
+3e468a8d,Launching attempt_<*>_0022_m_000008_1,1
+33804819,KILLING attempt_<*>_0022_m_000009_0,1
+1bb6f249,Launching attempt_<*>_0022_m_000006_1,1
+3263fd26,Launching attempt_<*>_0022_m_000004_1,1
+d396ddbd,KILLING attempt_<*>_0022_m_000007_1,1
+b510b75b,KILLING attempt_<*>_0022_m_000007_0,1
+575c1c15,KILLING attempt_<*>_0022_m_000005_1,1
+b917b764,KILLING attempt_<*>_0022_m_000005_0,1
+521441f6,KILLING attempt_<*>_0022_m_000008_1,1
+a2cd6c64,KILLING attempt_<*>_0022_m_000008_0,1
+96f2421b,KILLING attempt_<*>_0022_m_000004_1,1
+18d70141,KILLING attempt_<*>_0022_m_000004_0,1
+5f832701,KILLING attempt_<*>_0022_m_000006_1,1
+abe4d96b,KILLING attempt_<*>_0022_m_000006_0,1
+22351c34,KILLING attempt_<*>_0022_r_000000_0,1
+4e4a5704,"getResources() for application_<*>_0001: ask=5 release= 0 newContainers=0 finishedContainers=2 resourcelimit=<memory:1024, vCores:-26> knownNMs=4",1
+51a3cabf,Launching attempt_<*>_0001_m_000006_1,1
+1f53c45d,Launching attempt_<*>_0001_m_000002_1,1
+f3a1c5cb,Launching attempt_<*>_0001_m_000004_1,1
+7fc7616f,KILLING attempt_<*>_0001_m_000002_1,1
+2b3aa02b,KILLING attempt_<*>_0001_m_000004_1,1
+e366ce15,KILLING attempt_<*>_0001_m_000006_1,1
+5cad0102,Abandoning BP-<*>-<*>-<*>:blk_<*>_2928,1
+33cc392b,Abandoning BP-<*>-<*>-<*>:blk_<*>_2899,1
