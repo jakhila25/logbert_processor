@@ -25,13 +25,13 @@ app = FastAPI()
 # Initialize Redis client (adjust host/port/db as needed)
 REDIS_HOST = os.getenv("REDIS_HOST", "redis-19932.c263.us-east-1-2.ec2.redns.redis-cloud.com")
 REDIS_PORT = int(os.getenv("REDIS_PORT", 19932))  # ensure it's an int
-REDIS_USERNAME = os.getenv("REDIS_USERNAME")
-REDIS_PASSWORD = os.getenv("REDIS_PASSWORD")
+REDIS_USERNAME = os.getenv("REDIS_USERNAME", "default")
+REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", "SrPY3JUt6TXi33BPdDRDiW9fIplx2BJe")
 REDIS_QUEUE = os.getenv("REDIS_QUEUE", "logbert_uploads")
 S3_BUCKET = os.getenv("S3_BUCKET", "group13506")
 S3_REGION = os.getenv("S3_REGION", "eu-north-1")
-S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
-S3_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID", "AKIARVB2F2G73CRY5NS3")
+S3_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY", "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")
 DATABASE_URL = os.getenv("DATABASE_URL",
                          "postgresql://trans_owner:BookMyService7@ep-sweet-surf-a1qeduoy.ap-southeast-1.aws.neon.tech/logbert_rca?options=-csearch_path%3Dtrans")
 
