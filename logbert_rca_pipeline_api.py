@@ -227,9 +227,9 @@ def detect_anomalies_and_explain(input_log_path):
     options["device"] = torch.device(
         "cuda" if torch.cuda.is_available() else "cpu")
 
-    tokenizer = AutoTokenizer.from_pretrained(MISTRAL_MODEL, cache_dir="./hf_cache")
-    model_mistral = AutoModelForCausalLM.from_pretrained(MISTRAL_MODEL, torch_dtype=torch.float32).to(options["device"])
-    model_mistral.eval()
+   # tokenizer = AutoTokenizer.from_pretrained(MISTRAL_MODEL, cache_dir="./hf_cache")
+   # model_mistral = AutoModelForCausalLM.from_pretrained(MISTRAL_MODEL, torch_dtype=torch.float32).to(options["device"])
+   # model_mistral.eval()
     vocab = WordVocab.load_vocab(options["vocab_path"])
     model = load_logbert_model(options, vocab).to(options["device"]).eval()
     center = load_center(CENTER_PATH, options["device"])
@@ -269,9 +269,9 @@ def detect_anomalies_and_explain(input_log_path):
         top_eids = test_sequences[i][:TOP_EVENTS]
         event_templates = [event_template_dict.get(
             eid, f"[Missing Event {eid}]") for eid in top_eids]
-        prompt = generate_prompt(event_templates)
-        explanation = call_mistral(prompt, tokenizer, model_mistral, options["device"])
-
+        #prompt = generate_prompt(event_templates)
+        #explanation = call_mistral(prompt, tokenizer, model_mistral, options["device"])
+        explanation = ""
         results.append({
             "AppId": app_ids[i],
             "Score": score,
